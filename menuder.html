@@ -1,0 +1,120 @@
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Menu d&eacute;roulant
+  </title>
+  <meta content="Christian Souchon" name="author"/>
+  <meta content="Menu d&eacute;roulant " name="description"/>
+  <meta content="java script" name="keywords"/>
+  <script type="text/javascript">
+   function toggleMe(a){
+var e=document.getElementById(a);
+var i = document.getElementById(a + '_image');
+if(!e)return true;
+if(e.style.display=="none"){
+e.style.display="block"
+i.src = 'moins.gif';
+} else {
+e.style.display="none"
+i.src = 'plus.gif';
+}
+return false;
+}
+  </script>
+  <script type="text/javascript">
+   function OpenDiv(id){ 
+for (i=1;i<=100;i++) { /* so you can add up to 100 options on each page */
+ var divname = 'div'+i;
+ var divStyle = document.getElementById(divname).style;
+ divStyle.display=(id==divname)?'block':'none';
+}
+return false;
+ }
+  </script>
+ </head>
+ <body>
+  <p>
+   <a onclick="return toggleMe('para1')" style="cursor:pointer;">
+    <img id="para1_image" src="plus.gif" style="border:0;margin-right:5px;vertical-align:middle;"/>
+    Question
+   </a>
+  </p>
+  <div id="para1" style="display:none;">
+   Answer to Question:
+   <br/>
+   Bla
+   <br/>
+   bla
+   <br/>
+   Bla
+   <br/>
+  </div>
+  &lt;--
+  <br/>
+  Click to Show/Hide My Text
+  <br/>
+  1.Go to the guide where you want to add the expandable text: ?Click Add New Box,
+  <br/>
+  ?Choose a Rich Text box,
+  <br/>
+  ?Give it a name and click Create Box
+  <br/>
+  <br/>
+  2.Click add text.
+  <br/>
+  3.Click the Plain Text Editor tab.
+  <br/>
+  4.Copy this code and paste it in the Plain Text Editor box:
+  <br/>
+  <br/>
+  ****************************
+  <br/>
+  <br/>
+  <p>
+   <a onclick="OpenDiv('div1')" style="cursor:pointer;">
+    Question 1
+   </a>
+  </p>
+  <div id="div1" style="display:block;">
+   Answer to Question 1
+  </div>
+  <p>
+   <a onclick="OpenDiv('div2')" style="cursor:pointer;">
+    Question 2
+   </a>
+  </p>
+  <div id="div2" style="display:none;">
+   Answer to Question 2
+  </div>
+  &lt;--
+  <br/>
+  Question 1 (or whatever you call that section) will display by default. All other sections will be hidden. You'll be reusing the code from the
+  <p>
+   tag through the
+   tag for "Question 2" for each question/answer pair.
+   <br/>
+   5.Change the items in bold: ?Question: Add the text of your question (or whatever heading you want) here.
+   <br/>
+   ?Answer to Question: Add the answer to your question (or whatever text/images/widgets you want) here.
+   <br/>
+   <br/>
+   6.Add another Question/Answer pair: ?Paste the code you copied earlier (
+   <p>
+    tag through
+    tag).
+    <br/>
+    ?The divx reference in the onclick event and the div tag should be the same for each pair, and the only difference should be the number. Your first pair will be div1, the second pair will be div2, the third pair will be div3, and so on.
+    <br/>
+    The ids must start with div1 (on each page) and run in sequence (1, 2, 3, 4, etc.) or the code will not work.
+    <br/>
+    ?Repeat these steps for all of your question/answer pairs, ensuring you use the next number in sequence for each one.
+    <br/>
+    <br/>
+    7.Click Save Changes.
+    <br/>
+    You may need to refresh your page to see the content.-&gt;
+   </p>
+  </p>
+ </body>
+</html>
