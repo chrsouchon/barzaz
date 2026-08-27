@@ -46,3 +46,4 @@ Perinaig[[:space:]]Leroux[[:space:]]David.mp4 filter=lfs diff=lfs merge=lfs -tex
 *.mka filter=lfs diff=lfs merge=lfs -text
 *.mk3d filter=lfs diff=lfs merge=lfs -text
 Identitytrescourt.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
