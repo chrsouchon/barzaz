@@ -1,0 +1,900 @@
+<html>
+<head>
+
+<style type="text/css">
+body {
+	
+font-size: 12px;
+	
+font-family: "Palatino Linotype", Georgia, Serif;
+	
+background: #fff url(images/azulejo-bg.jpg) fixed;
+	
+color: #203a56;
+	margin: 0;
+	
+padding: 0;
+
+	}
+
+	
+
+#book {
+	
+background: url(images/bordure-horizontale.jpg) top left repeat-x fixed;
+	
+margin: 0;
+	
+padding: 0;
+}
+
+
+
+#bordure1 {
+	
+background: url(images/bordure-verticale1.gif) top left repeat-y;
+	margin: 0 auto;
+	
+width: 985px;
+}
+
+
+
+#bordure2 {
+	
+background: url(images/bordure-verticale2.gif) top right repeat-y;
+}
+
+
+#header {
+	
+margin: -292px 0 0 0;
+	
+padding: 0;
+	
+height: 292px;
+}
+
+
+#headerlogo {
+	
+margin: 0 /*-41px*/;
+	
+height: 292px;
+	
+background: url(images/batel2.gif) top left no-repeat;
+}
+
+
+
+#headerimg {
+	
+margin: 0;
+	
+height: 292px;
+	
+background: url(images/poseidon.gif) top right no-repeat;
+	vertical-align: bottom;
+	}
+
+
+
+.description {
+	
+font-size: 10px;
+	
+width: 495px;
+	
+letter-spacing: normal;
+	
+padding: 82px 0 5px 13px;
+	
+margin: 0;
+}
+
+
+
+#tibato {
+	
+margin: 0 40px;
+	
+padding: 0;
+	
+height: 292px;
+}
+		
+
+
+#page {
+	
+margin: 0 50px;
+	
+padding: 0 15px 70px 15px;
+	
+background-color: #fff;
+	}
+
+
+
+#breadcrumbs {
+	
+margin-top: 0;
+}
+
+
+
+#content {
+	
+padding: 0 0 50px 0;
+	
+float: left;
+	
+width: 512px;
+	
+background-color: #fff;
+	}
+	
+
+
+#single {
+	
+padding: 0 0 50px 0;
+	
+float: left;
+	
+width: 512px;
+	
+background-color: #fff;
+	}
+
+
+#page-content {
+	
+padding: 0 0 50px 0;
+}
+
+
+
+#footer {
+	
+height: 182px;
+	
+padding: 0;
+	
+margin: -70px auto 0 auto;
+	
+width: 985px;
+	}
+
+
+
+#footer-support {
+	
+height: 182px;
+	
+margin: 0 50px;
+	
+background: url(images/bordure-footer.jpg) top left repeat-x;
+}
+
+
+
+#fin-lusi {
+	
+background: url(images/fin-lusi.jpg) center no-repeat;
+	
+margin: -185px 5px 0 5px;
+}
+
+
+
+#footer p {
+	
+margin: 0 auto;
+	padding: 20px 0;
+	
+text-align: center;
+	
+width: 70%;
+	}
+	
+
+
+#peixe-g {
+	
+height: 182px;
+	
+background: url(images/peixe-g.gif) bottom left no-repeat;
+}
+
+
+
+#peixe-d {
+	
+height: 182px;
+	
+background: url(images/peixe-d.gif) bottom right no-repeat;
+}
+
+
+small {
+	
+font-size: 10px;
+}
+
+
+.date-post {
+	
+font-size: 12px;
+	
+color: #888;
+}
+
+
+
+.entry {
+	
+margin-top: 20px;
+}
+
+
+
+a.more-link {
+
+font-size: 14px;
+
+font-weight: bold;
+
+display: block;
+
+color: #6c79a6;
+
+text-decoration: none;
+
+margin: 10px 0 20px 0;
+}
+
+
+
+a:hover.more-link {
+
+color: #97a1c7;
+}
+
+
+
+
+/*	Begin Headers */
+
+
+h3.comments {
+	
+padding: 0;
+	
+margin: 40px auto 20px ;
+}
+
+h1 {
+	
+height: 105px;
+	
+position: absolute;
+}
+
+
+
+#headerimg h1 {
+	
+font-size: 48px;
+	
+font-family: "Monotype Corsiva", Georgia, serif;
+	
+letter-spacing: normal;
+	
+padding: 0 0 5px 10px;
+	
+margin: 0;
+	width: 452px;
+}
+	
+
+
+#headerimg a {
+	
+color: #203a56;
+	
+position: absolute; 
+	bottom: 25px; 
+
+}
+
+
+
+#headerimg a:hover {
+	
+color: #97a1c7;
+}
+
+
+#sidebar h2 {
+	
+font-size: 20px;
+	
+margin: 0;
+	
+padding: 0;
+	}
+
+
+
+h2 {
+	
+font-family: "Monotype Corsiva", Georgia, serif;
+	letter-spacing: normal;
+	
+font-size: 32px;
+	
+margin: 0;
+	padding: 0;
+	
+text-align: left;
+	}
+
+
+h3 {
+	
+font-family: "Monotype Corsiva", Georgia, serif;
+	font-size: 20px;
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist li .avatar { 
+	float: right;
+	border: 1px solid #eee;
+	padding: 2px;
+	background: #fff;
+	}
+
+
+.commentlist cite, .commentlist cite a {
+	
+font-weight: bold;
+	font-style: normal;
+	
+font-size: 1.1em;
+	
+}
+
+
+.commentlist p {
+	font-weight: normal;
+	
+line-height: 1.5em;
+	text-transform: none;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a {
+	color: #6c79a6;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #97a1c7;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+/* Begin Structure */
+
+.narrowcolumn {
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+
+.post {
+	text-align: justify;
+	}
+
+.post hr {
+	display: block;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+
+
+.widecolumn .postmetadata {
+	
+margin: 30px 0;
+	}
+
+
+
+.widecolumn .smallattachment {
+	
+text-align: center;
+	
+float: left;
+	width: 128px;
+	
+margin: 5px 5px 5px 0px;
+}
+
+
+
+.widecolumn .attachment {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.postmetadata {
+	font-size: 11px;
+	color: #888;
+	text-align: justify;
+	width: 510px;
+	margin: 20px 0;
+	padding-bottom: 100px;
+	padding-top: 10px;
+	background: url(images/coquillage.jpg) bottom center no-repeat;
+}
+
+.clear {
+	clear: both;
+}
+
+/* End Structure */
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+.wp-captionalignleft {
+float: left;
+border:1px solid #70a5cb;
+margin:8px 10px 5px 0;
+padding:5px 0 0;
+text-align:center;
+}	
+
+.wp-captionalignright {
+float: right;
+border:1px solid #70a5cb;
+margin:8px 0 5px 10px;
+padding:5px 0 0;
+text-align:center;
+}
+
+/* End Images */
+
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style: none;
+	}
+
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	}
+
+#sidebar ul li {
+	list-style: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 0;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+
+#sidebar #searchform #s {
+	width: 120px;
+	padding: 0 2px 0 0;
+	}
+
+#sidebar #searchsubmit {
+	padding: 0 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	font-family: "Monotype Corsiva", Georgia, serif;
+	font-size: 20px;
+	width: 180px;
+	padding: 2px;
+	margin: 5px 0px 1px 0;
+	background-color: #35446a;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	}
+#commentform input:hover {
+	background-color: #e2e9f6;
+	color:#35446a;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	font-size: 11px;
+	color: #203a56;
+	min-height: 50px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	background: url(images/batocom.gif) top left no-repeat;
+	margin: 15px 0 3px;
+	padding: 0 10px 3px 55px;
+	list-style: none;
+	font-size: 11px;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+#adsense-thematique {
+	width: 730px;
+	margin: 0 auto 30px auto;
+	background-color: #fff;
+}
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 0 0 0 15px;
+	width: 300px;
+	float: left;
+	border-left: #70a5cb solid 1px;
+	margin: 0 0 10px 25px;
+	background-color: #fff;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+	
+#searchsubmit {
+	background:#35446a;
+	color:#fff;
+	cursor:pointer;
+	border: none;
+}
+#searchsubmit:hover {
+	background:#e2e9f6;
+	color: #35446a;
+}
+/* End Sidebar */
+
+/* Begin Calendar */
+#calendar_wrap {
+	margin-top: 5px;
+}
+
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px 0;
+	width: 200px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+/* End Calendar */
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	background: url(images/quote.jpg) top left no-repeat;
+	margin: 15px 0 0 0;
+	padding-left: 35px;
+	font-style: italic;
+	font-size: 12px;
+	color: #888;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	padding: 5px 0 0 0;
+	margin: 8px 0;
+	border: #70a5cb solid 1px;	
+	text-align: center;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	font-style: italic;
+	line-height: 17px;
+	padding: 5px 0 2px 0;
+	margin: 0;
+}
+
+.alignright img {
+	margin: 0 0 6px 5px;
+	display: block;
+	text-align: center;
+	}
+
+.alignleft img {
+	margin: 0 0 6px 5px;
+	display: block;
+	text-align: center;
+	}
+.button-wikio {
+margin: 20px auto;
+width: 120px;
+}
+</style>
+
+<title>Gravures populaires</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></meta>
+<META Name="author" content="Christian Souchon">
+<META Name="description" content="Département Antiquités du Musée national de Belgrade>
+
+</head>
+
+<body>
+<doctype html="" lang="fr-FR">
+<div id="book">
+<div id="bordure1">
+<div id="bordure2">
+<div id="tibato"></div>
+<div id="header">
+<div id="headerlogo">
+<div id="headerimg">
+<center>
+</div></div></div>
+
+<div id="page">
+
+<div class="navigation">
+<a href="muzej.html">Belgrade - Le Musée national</a><br>
+
+<font size=-2><i>Cliquer sur le liens ci-dessus pour retourner à la page correspondante. </i></font>
+</div>
+<center>
+
+<h2>Le poste d'observation de Kaymakchalan:<br>
+ généraux serbes et français</h2><br>
+
+<div class="wp-caption alignnone" style="width: 860px;">
+
+<img src="images/monu1.jpg" height=200 width=355 border=0 name=AP>
+<img src="images/monu2.jpg" height=200 width=484 border=0> 
+
+<IMG src="images/monu3.jpg" height=272 width=839 border=0  useMap=#CARTE>
+
+<MAP name=CARTE>
+<AREA onmouseover="document.AP.src='photos/mo110741.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=325,70,390,107" alt='Putnik D'Esperey'>
+
+<AREA onmouseover="document.AP.src='photos/mo110744.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=388,56,460,106" alt='Alexandre I, Pierre I'>
+
+<AREA onmouseover="document.AP.src='photos/mo110748.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=327,110,388,141" alt='Henrys, Sarail'>
+
+<AREA onmouseover="document.AP.src='photos/mo110752.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=320,160,383,200" alt='Gambetta, Guillaumat'>
+
+<AREA onmouseover="document.AP.src='photos/mo110756.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=250,159,320,208" alt='Živković et  Pavlović'>
+
+<AREA onmouseover="document.AP.src='photos/mo110801.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=281,104,324,145" alt='Tranié'>
+
+<AREA onmouseover="document.AP.src='photos/mo110806.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=464,103,504,147" alt='Voïvode Mišić'>
+
+<AREA onmouseover="document.AP.src='photos/mo110810.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=460,156,523,205" alt='Voïvode Vojović et Général Jurišić Šturm '>
+
+<AREA onmouseover="document.AP.src='photos/mo110813.jpg';"
+onMouseOut="document.AP.src='images/monu1.jpg';"
+shape=RECT target=_blank coords=391,153,456,199" alt='Amiral Guépratte et Voïvode Stepanović'>
+</map> 
+<!--što peča  težit lić--> 
+<br>
+<p class="wp-caption-text">Parc des Pionniers: Monument aux généraux serbes et français</p>
+<p class="wp-caption-text">BALAYER L'IMAGE DU BAS POUR AFFICHER LES PLAQUES</p>
+</div>
+<p></center> À la suite de l'invasion par les armées austro-allemandes et bulgares de la Serbie, les troupes du général Sarrail débarquent à Salonique le 5 octobre 1915 pour conserver le contrôle du Vardar, seule voie de communication des Serbes vers l'extérieur. C'est un échec et elles se replient dans des conditions climatiques difficiles en décembre 1915. L'armée serbe est évacuée par les ports albanais et est reconstituée à Salonique.<br>
+Le 27 mai 1916, les Bulgares pénètrent en territoire grec. Ils envahissent toute la Macédoine orientale et s'apprêtent à verrouiller l'accès à la Macédoine occidentale. Le plus haut sommet de la Moglena, le <b>Kaymakchalan</b>, qui domine la plaine de Salonique, est conquis le 20 août par les Serbes qui empêchent les Bulgares de couper la route de Monastir (Bitola) par la bataille d'Ostrovo, le 28 août. La ville de Monastir elle-même est investie le 19 novembre par les troupes françaises...<br>
+<br>
+Le MONUMENT DU PARC DES PIONNIERS utilise des matériaux provenant de Kaymakchalan et reconstitue un poste d'observation qui joua un rôle capital dans les opérations: <i>"Osmatračnica sa Kajmakčalana"</i>.<br>
+Les généraux serbes et fançais dont les noms figurent sur les plaques qui ornent le monument s'illustrèrent à des titres divers lors de l'offensive victorieuse de l'été 1918 qui vit la défaite des Bulgares. Le prince Alexandre, régent de Serbie, commandait l'armée serbe. Il monta sur le trône de la future Yougoslavie en 1921. </p>
+<center><br>
+<br>
+<Embed  height="50"  SRC="sons/mardrina.mp3" autostart="true"><br>
+
+<a href="sons/mardrina.mp3">Marš na Drinu</a><br>
+<br>
+<i>La mélodie "Marš na Drinu" (MARCHE DE LA DRINA)</i> qui rappelle  ces événements soulève toujours l'enthousiasme du public.
+</div>
+
+</div>
+</div>
+</div></div>
+
+<div id="footer">
+<div id="footer-support"></div>
+<div id="fin-lusi">
+<div id="peixe-g">
+<div id="peixe-d">
+</div></div></div>
+</div>
+
+</doctype>
+
+</body>
+</html>
+
