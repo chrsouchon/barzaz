@@ -1,0 +1,396 @@
+<html>
+ <head>
+  <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+  <meta content="fr" http-equiv="content-language"/>
+  <title>
+   Mots crois&eacute;s. Felix
+  </title>
+  <meta content="noindex,nofollow" name="robots"/>
+  <meta content="&copy;2010-2017 Christian Souchon" name="copyright"/>
+  <meta content="general" name="rating"/>
+  <link href="http://chrsouchon.fr/" rev="made"/>
+  <link href="../" rel="start"/>
+  <link href="../felix.html" rel="prev"/>
+  <link href="http://chrsouchon.fr/base.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://chrsouchon.fr/base_print.css" media="print" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+   <!--
+.case {border: 1px solid black}-->
+  </style>
+  <script language="javascript">
+   vPTest = 1;
+
+vDimH = 5;
+
+vDimV = 5;
+
+vMots = '';
+
+vLast = 1;
+
+
+function icolor(theID)
+{
+var theTest1 = theID.substr(5,3);
+
+if (theTest1 == '000') {theTest1 = 'z';}
+var theTest2 = theID.substr(8,3);
+if (theTest2 == '000') {theTest2 = 'z';}
+for (var i = 0; i < vDimV; i++) {
+	myrow=mytable.getElementsByTagName("tr").item(i);
+	for (var v = 0; v < vDimH; v++) {
+		mycel=myrow.getElementsByTagName("td").item(v);
+		if (mycel.id.substr(5,3) == theTest1) {
+			mycel.bgColor = '#ccccff';
+		} else {
+			if (mycel.id.substr(8,3) == theTest2) {
+				mycel.bgColor = '#ccccff';
+			} else {
+				if (mycel.bgColor == '#ccccff') {mycel.bgColor = '#ffffff';}
+			}
+		}
+	}
+}
+}
+
+function foc(obj) {
+obj.select(); obj.focus();
+}
+
+
+function idefH(code){
+var theVal = '';
+switch (code)
+{
+case '001' : theVal = "Gifle";break;
+case '005' : theVal = "Pipi";	break;
+case '006' : theVal = "Si ce n'est toi, c'est donc ta soeur";	break;
+case '008' : theVal = "Coups de poing";break;
+}
+myDefH.innerHTML = theVal;
+}
+
+function idefV(code){
+var theVal = '';
+switch (code)
+{
+case '001' : theVal = "Passé du verre dans la bouche";break;
+case '002' : theVal = "Pour lancer des flèches";	break;
+case '003' : theVal = "Presqu'un phénix";	break;
+case '004' : theVal = "Carabosse, par exemple";	break;
+case '007' : theVal = "Note";	break;
+case '009' : theVal = "Très bien";	break;
+}
+myDefV.innerHTML = theVal;
+}
+
+function icas(objet){
+vMots = objet.id;
+icolor(vMots);
+idefH(objet.id.substr(5,3));
+idefV(objet.id.substr(8,3));
+imot(5,document.FormJeu.SaisieH);
+imot(8,document.FormJeu.SaisieV);
+if (vLast == 1) {foc(document.FormJeu.SaisieH);} else {foc(document.FormJeu.SaisieV);}
+}
+
+function ichange(motdelta,delta,theVal){
+theMax = theVal.length;
+for (var i = 0; i < vDimV; i++) {
+	myrow=mytable.getElementsByTagName("tr").item(i);
+	for (var v = 0; v < vDimH; v++) {
+		mycel=myrow.getElementsByTagName("td").item(v);
+		if (mycel.id.substr(motdelta,3) == vMots.substr(motdelta,3)) {
+			var thePos = Number(mycel.id.substr(delta,2));
+			if (thePos <= theMax) {
+				var thecar=theVal.charAt(thePos - 1);
+				if (thecar==' ') {thecar = '?';} else {thecar = thecar.toUpperCase();}
+				mycel.innerHTML = '';
+				mycel.innerHTML = thecar;
+			}
+		}
+	}
+}
+}
+
+function imot(motdelta,objet){
+var theMot = '';
+var theTest = vMots.substr(motdelta,3);
+if (theTest == '000') {
+	theMot = '';
+} else {
+	for (var i = 0; i < vDimV; i++) {
+		myrow=mytable.getElementsByTagName("tr").item(i);
+		for (var v = 0; v < vDimH; v++) {
+			mycel=myrow.getElementsByTagName("td").item(v);
+			if (mycel.id.substr(motdelta,3) == theTest) {
+				theMot = theMot + mycel.innerHTML;
+			}
+		}
+	}
+}
+objet.value = theMot;
+}
+
+function itrich(motdelta,objet){
+var theTest = vMots.substr(motdelta,3);
+for (var i = 0; i < vDimV; i++) {
+	myrow=mytable.getElementsByTagName("tr").item(i);
+	for (var v = 0; v < vDimH; v++) {
+		mycel=myrow.getElementsByTagName("td").item(v);
+		if (mycel.id.substr(motdelta,3) == theTest) {
+			mycel.innerHTML = '';
+			mycel.innerHTML = mycel.id.charAt(15);
+		}
+	}
+}
+imot(5,document.FormJeu.SaisieH);
+imot(8,document.FormJeu.SaisieV);
+foc(objet);
+}
+
+function isolut(affich){
+var oneerr = 0;
+for (var i = 0; i < vDimV; i++) {
+	myrow=mytable.getElementsByTagName("tr").item(i);
+	for (var v = 0; v < vDimH; v++) {
+		mycel=myrow.getElementsByTagName("td").item(v);
+		var thecar = mycel.id.charAt(15);
+		if (thecar != '0') {
+			if (mycel.innerHTML != thecar) {
+				oneerr = 1;
+				mycel.bgColor = '#ffccff';
+				if (affich == 2) {mycel.innerHTML = '';	mycel.innerHTML = thecar;}
+			} else {mycel.bgColor = '#ffffff';}
+		}
+	}
+}
+imot(5,document.FormJeu.SaisieH);
+imot(8,document.FormJeu.SaisieV);
+foc(document.FormJeu.SaisieH);
+vLast = 1;
+if (oneerr == 0) {alert("La solution est correcte!");}
+}
+
+function isaisieH(){
+if (vMots.substr(5,3) != '000') {
+	ichange(5,11,document.FormJeu.SaisieH.value);
+	imot(8,document.FormJeu.SaisieV)
+	vLast = 1;
+}
+}
+
+function isaisieV(){
+if (vMots.substr(8,3) != '000') {
+	ichange(8,13,document.FormJeu.SaisieV.value);
+	imot(5,document.FormJeu.SaisieH)
+	vLast = 2;
+}
+}
+
+// -->
+  </script>
+ </head>
+ <body bgcolor="#ffffff">
+  <table border="0" cellpadding="0" cellspacing="0" width="98%">
+   <tr>
+    <td align="center" id="PubH1">
+    </td>
+   </tr>
+   <tr height="24">
+    <td align="center" bgcolor="black" height="24">
+     <a href="http://chrsouchon.fr/">
+      <img border="0" height="24" src="http://chrsouchon.fr/motcrois.gif" width="346"/>
+     </a>
+    </td>
+   </tr>
+  </table>
+  <div align="center">
+   <p>
+    <b>
+     Mots crois&eacute;s pour F&eacute;lix
+    </b>
+   </p>
+   <table border="0" cellpadding="0" cellspacing="0" style="border: 2px solid black; font-size: 12pt">
+    <tbody>
+     <tr height="25">
+      <td align="center" class="case" height="25" id="C00000010010101B" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C00010010020201A" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C00020010030301F" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C00030010040401F" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C00040010050501E" onclick="icas(this)" width="25">
+       ?
+      </td>
+     </tr>
+     <tr height="25">
+      <td align="center" class="case" height="25" id="C01000050010102U" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C01010050020202R" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C01020050030302E" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C01030050040402E" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" bgcolor="black" class="case" height="25" id="C010400000000000" width="25">
+       #
+      </td>
+     </tr>
+     <tr height="25">
+      <td align="center" bgcolor="black" class="case" height="25" id="C020000000000000" width="25">
+       #
+      </td>
+      <td align="center" class="case" height="25" id="C02010060020103C" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C02020060030203L" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C02030060040303E" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C02040060070401M" onclick="icas(this)" width="25">
+       ?
+      </td>
+     </tr>
+     <tr height="25">
+      <td align="center" class="case" height="25" id="C03000090090101T" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" bgcolor="black" class="case" height="25" id="C030100000000000" width="25">
+       #
+      </td>
+      <td align="center" class="case" height="25" id="C03020110030104I" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" bgcolor="black" class="case" height="25" id="C030300000000000" width="25">
+       #
+      </td>
+      <td align="center" class="case" height="25" id="C03040100070102I" onclick="icas(this)" width="25">
+       ?
+      </td>
+     </tr>
+     <tr height="25">
+      <td align="center" class="case" height="25" id="C04000080090102B" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C04010080000200O" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C04020080030305X" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" class="case" height="25" id="C04030080000400E" onclick="icas(this)" width="25">
+       ?
+      </td>
+      <td align="center" bgcolor="black" class="case" height="25" id="C040400000000000" width="25">
+       #
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <p>
+   </p>
+   <form name="FormJeu">
+    <table border="0" cellpadding="4" cellspacing="0">
+     <tr height="50">
+      <td align="left" bgcolor="#000000" rowspan="2" valign="top" width="130">
+       <font color="#ffffff">
+        Horizontalement
+       </font>
+      </td>
+      <td align="left" bgcolor="#ccccff" height="50" valign="top" width="400">
+      </td>
+     </tr>
+     <tr>
+      <td align="center" bgcolor="#9999cc" valign="top" width="400">
+       <input autocomplete="off" maxlength="100" name="SaisieH" onkeyup="isaisieH()" size="30" type="text"/>
+       &nbsp;
+       <font size="1">
+        [
+        <a href="#" onclick="foc(document.FormJeu.SaisieH); return false">
+         S&eacute;lectionner
+        </a>
+        |
+        <a href="#" onclick="itrich(5,document.FormJeu.SaisieH); return false">
+         Afficher mot
+        </a>
+        ]
+       </font>
+      </td>
+     </tr>
+     <tr height="50">
+      <td align="left" bgcolor="#000000" rowspan="2" valign="top" width="130">
+       <font color="#ffffff">
+        Verticalement
+       </font>
+      </td>
+      <td align="left" bgcolor="#ccccff" height="50" valign="top" width="400">
+      </td>
+     </tr>
+     <tr>
+      <td align="center" bgcolor="#9999cc" valign="top" width="400">
+       <input autocomplete="off" maxlength="100" name="SaisieV" onkeyup="isaisieV()" size="30" type="text"/>
+       &nbsp;
+       <font size="1">
+        [
+        <a href="#" onclick="foc(document.FormJeu.SaisieV); return false">
+         S&eacute;lectionner
+        </a>
+        |
+        <a href="#" onclick="itrich(8,document.FormJeu.SaisieV); return false">
+         Afficher mot
+        </a>
+        ]
+       </font>
+      </td>
+     </tr>
+    </table>
+    <p>
+     [
+     <a href="#" onclick="isolut(1)">
+      Comparer avec la solution
+     </a>
+     |
+     <a href="#" onclick="isolut(2)">
+      Montrer la solution
+     </a>
+     ]
+    </p>
+   </form>
+  </div>
+  <script language="javascript">
+   <!--
+mybody=document.getElementsByTagName("body").item(0);
+mytable=mybody.getElementsByTagName("table").item(1);
+
+mytabbas=mybody.getElementsByTagName("table").item(2);
+temp=mytabbas.getElementsByTagName("tr").item(0);
+myDefH=temp.getElementsByTagName("td").item(1);
+temp=mytabbas.getElementsByTagName("tr").item(2);
+myDefV=temp.getElementsByTagName("td").item(1);
+
+icas(mytable.getElementsByTagName("tr").item(0).getElementsByTagName("td").item(0));
+foc(document.FormJeu.SaisieH);
+// -->
+  </script>
+  <table border="0" cellpadding="0" cellspacing="0" width="98%">
+   <tr height="24">
+    <td align="center" bgcolor="black" height="24">
+     &nbsp;
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>
