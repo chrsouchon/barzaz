@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head><title>Bienvenue</title><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Barzhaz Breizh + Bonnie Prince Charlie + Breizh o Koroll © Christian Souchon " name="Description"/>
+<meta content="barzhaz breizh barzaz breiz hersart de la villemarque kervarker midi files download breton music brittany musique bretonne bretagne sonerez brezhoneg bonnie prince charlie jacobite dance danse traditional traditionnel jacobite songs scotland charles edward stuart scottish tunes  musique écossaise scotland ecosse jean-michel guilcher breizh izel poésie poetry translation traduction Michel Galiana Mokranjac Rukoveti Christian Souchon" name="keywords"/>
+<link href="souchon.css" rel="stylesheet" title="style" type="text/css"/>
+<link href="https://chrsouchon.fr/logo/goelan.jpg" rel="icon" type="image/x-icon"/></head>
+<body bgcolor="yellow" link="#ff0000" text="#000099">
+<div id="Layer1" style="HEIGHT: 350px; LEFT: 10px; POSITION: absolute; TOP: 10px; WIDTH: 650px; Z-INDEX: 1">
+<img height="200" src="b_ha.gif" width="650"/><img height="450" src="b_mi.gif" width="650"/><img height="200" src="b_ba.gif" width="650"/></div>
+<div id="Layer2" style="HEIGHT: 640px; LEFT: 30px; POSITION: absolute; TOP: 40px; WIDTH: 650px; Z-INDEX: 2"><p><center>
+<img src="goelan.jpg"/><br/><br/>
+<b> BIENVENUE SUR CETTE PAGE D'ACCUEIL</b><br/><br/>
+</center></p>
+</div>
+<div id="Layer3" style="HEIGHT: 400px; LEFT: 15px; POSITION: absolute; TOP: 240px; WIDTH: 630px; Z-INDEX: 3"><p>
+<hr align="center" width="80%"/>
+<hr align="center" width="90%"/><b><ul>
+<script language="JavaScript">
+<!--
+
+function SymError()
+{
+  return true;
+}
+
+window.onerror = SymError;
+
+var SymRealWinOpen = window.open;
+
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+
+window.open = SymWinOpen;
+
+//-->
+</script>
+<script language="javascript">
+var hirio = new Date();
+var eur = hirio.getHours();
+var salud;
+
+if (eur <= 18)
+{salud = "Bonjour... ";
+}
+else if (eur > 18)
+{salud = "Bonsoir... ";
+}
+document.write("<LI>" + salud + "Mon nom est Christian SOUCHON et j'habite Jouy en Josas (France)" + "</b></font><br><size=1>" + "</ul></p>");
+</script>
+<p><b><ul><li>Mes passe-temps sont la musique informatique et les langues bretonne et serbe.</li></ul></b><br/>
+</p></ul></b></p>
+<p><b><ul><li>Ce qui m'a conduit à traiter des thèmes pas vraiment dans le vent: les Chants Jacobites, le Barzhaz Breizh, les "Rukoveti" de Mokranjac.</li></ul></b><br/>
+</p>
+<p><b><ul> <li>En outre, je m'efforce de faire connaître, dans une version bilingue français - anglais, l'oeuvre du poète MICHEL GALIANA.<br/>
+</li></ul></b></p>
+<p><b><ul> <li>Cliquez sur les boutons ou les textes surlignés pour accéder aux rubriques correspondantes et ouvrez grand vos oreilles!</li></ul></b><br/>
+</p>
+<table align="center" border="0" cellpadding="0" width="640">
+<tr>
+<td height="17">
+<div align="center"> <p class="norme"><b><a href="charli1f.html" target="_top">CHANTS JACOBITES </a></b></p></div>
+</td>
+<td height="17">
+<div align="center"><p class="norme"><b><a href="barzha1f.html" target="_top">BARZHAZ BREIZH</a></b></p></div>
+</td>
+<td height="17">
+<div align="center"><p class="norme"><b><a href="https://mokranjac.chrsouchon.fr/Mokranjac.html" target="_top"><b>MOKRANJAC</b></a></b></p></div>
+</td>
+<td height="17">
+<div align="center"><p class="norme"><b><a href="https://galiana.chrsouchon.fr/index.html" target="_top"><b>MICHEL GALIANA</b></a></b></p></div>
+</td>
+</tr>
+<tr> <td width="25%"><center>
+<a href="charli1f.html" target="_top"><img src="hielandr.jpg"/></a></center></td>
+<td width="25%"><center>
+<a href="barzha1f.html" target="_top"><img src="barzhapt.jpg"/></a></center></td>
+<td width="25%"><center>
+<a href="https://mokranjac.chrsouchon.fr/Mokranjac.html" target="_top"><img src="mokrapt.jpg"/></a></center></td>
+<td width="25%"><center>
+<a href="https://galiana.chrsouchon.fr/index.html" target="_top"><img src="hermespt.jpg"/></a></center></td>
+</tr>
+</table>
+<center>
+<ul><li><img alt="" src="envelope.gif"/><a href="mailto:chrsouchon@free.fr"> E-mail:chrsouchon@free.fr</a></li></ul>
+<p>
+<p> <a alt="Welcome Page" href="index.html" target="_top"><img src="home1.gif"/></a> <br/>
+</p></p></center>
+</div>
+</body>
+</html>
+<script language="JavaScript">
+<!--
+var SymRealOnLoad;
+var SymRealOnUnload;
+
+function SymOnUnload()
+{
+  window.open = SymWinOpen;
+  if(SymRealOnUnload != null)
+     SymRealOnUnload();
+}
+
+function SymOnLoad()
+{
+  if(SymRealOnLoad != null)
+     SymRealOnLoad();
+  window.open = SymRealWinOpen;
+  SymRealOnUnload = window.onunload;
+  window.onunload = SymOnUnload;
+}
+
+SymRealOnLoad = window.onload;
+window.onload = SymOnLoad;
+
+//-->
+</script>
