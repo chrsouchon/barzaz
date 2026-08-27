@@ -1,0 +1,185 @@
+body {background-color: #ffffff}
+
+p, td, div {font-family: Helvetica, Arial, sans-serif}
+
+a:link {color: #0033cc}
+a:visited {color: #003399}
+a:active {color: #9933cc}
+a:hover {color: #3399ff}
+a {text-decoration: none}
+
+a.wht:link {color: #ffffff}
+a.wht:visited {color: #ffffff}
+a.wht:active {color: #ffcc00}
+a.wht:hover {color: #ffcc00}
+a.wht {text-decoration: none}
+
+.OngTA, .OngTG, .OngTD, .OngTF, .OngTC, .OngTB, .OngTL, .OngTP, .OngTZ {color: #000; background-image: url('Ong_FT.gif'); background-repeat: repeat-x}
+.OngSpTgA, .OngSpTgG, .OngSpTgD, .OngSpTgF, .OngSpTgC, .OngSpTgB, .OngSpTgL, .OngSpTgP, .OngSpTgZ {background-image: url('Ong_SpTg.gif'); background-repeat: repeat-x}
+.OngSpTdA, .OngSpTdG, .OngSpTdD, .OngSpTdF, .OngSpTdC, .OngSpTdB, .OngSpTdL, .OngSpTdP, .OngSpTdZ {background-image: url('Ong_SpTd.gif'); background-repeat: repeat-x}
+.OngTA, .OngSpTgA, .OngSpTdA {background-color: #d7d7d7}
+.OngTG, .OngSpTgG, .OngSpTdG {background-color: #ffcc33}
+.OngTD, .OngSpTgD, .OngSpTdD {background-color: #99ccff}
+.OngTF, .OngSpTgF, .OngSpTdF {background-color: #b1e27d}
+.OngTC, .OngSpTgC, .OngSpTdC {background-color: #e9e98a}
+.OngTB, .OngSpTgB, .OngSpTdB {background-color: #f0b7a3}
+.OngTL, .OngSpTgL, .OngSpTdL {background-color: #aaaaff}
+.OngTP, .OngSpTgP, .OngSpTdP {background-color: #f0ccf0}
+.OngTZ, .OngSpTgZ, .OngSpTdZ {background-color: #addee4}
+.OngN {color: #fff; background-image: url('Ong_FN.gif'); background-color: #000; background-repeat: repeat-x}
+.OngSpNg {background-image: url('Ong_SpNg.gif'); background-color: #000; background-repeat: repeat-x}
+.OngSpNd {background-image: url('Ong_SpNd.gif'); background-color: #000; background-repeat: repeat-x}
+.OngSt {color: #000; background-image: url('Ong_stop.gif'); background-color: #FFF; background-repeat: repeat-x}
+
+a.LOngNA:link, a.LOngNA:visited, a.LOngNA:hover, a.LOngNG:link, a.LOngNG:visited, a.LOngNG:hover, a.LOngND:link, a.LOngND:visited, a.LOngND:hover, a.LOngNF:link, a.LOngNF:visited, a.LOngNF:hover, a.LOngNC:link, a.LOngNC:visited, a.LOngNC:hover, a.LOngNB:link, a.LOngNB:visited, a.LOngNB:hover, a.LOngNL:link, a.LOngNL:visited, a.LOngNL:hover, a.LOngNP:link, a.LOngNP:visited, a.LOngNP:hover, a.LOngNZ:link, a.LOngNZ:visited, a.LOngNZ:hover, a.LOngFA:link, a.LOngFA:visited, a.LOngFA:hover, a.LOngFG:link, a.LOngFG:visited, a.LOngFG:hover, a.LOngFD:link, a.LOngFD:visited, a.LOngFD:hover, a.LOngFF:link, a.LOngFF:visited, a.LOngFF:hover, a.LOngFC:link, a.LOngFC:visited, a.LOngFC:hover, a.LOngFB:link, a.LOngFB:visited, a.LOngFB:hover, a.LOngFL:link, a.LOngFL:visited, a.LOngFL:hover, a.LOngFP:link, a.LOngFP:visited, a.LOngFP:hover, a.LOngFZ:link, a.LOngFZ:visited, a.LOngFZ:hover {font-size: 12px; font-weight: bold; float: left; height : 28px; line-height: 28px; white-space: nowrap; text-decoration : none; width: 80px}
+a.LOngNA:link, a.LOngNA:visited, a.LOngNG:link, a.LOngNG:visited, a.LOngND:link, a.LOngND:visited, a.LOngNF:link, a.LOngNF:visited, a.LOngNC:link, a.LOngNC:visited, a.LOngNB:link, a.LOngNB:visited, a.LOngNL:link, a.LOngNL:visited, a.LOngNP:link, a.LOngNP:visited, a.LOngNZ:link, a.LOngNZ:visited {color: #fff}
+a.LOngNA:hover {color: #d7d7d7}
+a.LOngNG:hover {color: #ffcc33}
+a.LOngND:hover {color: #99ccff}
+a.LOngNF:hover {color: #b1e27d}
+a.LOngNC:hover {color: #e9e98a}
+a.LOngNB:hover {color: #f0b7a3}
+a.LOngNL:hover {color: #aaaaff}
+a.LOngNP:hover {color: #f0ccf0}
+a.LOngNZ:hover {color: #addee4}
+a.LOngFA:link, a.LOngFA:visited, a.LOngFG:link, a.LOngFG:visited, a.LOngFD:link, a.LOngFD:visited, a.LOngFF:link, a.LOngFF:visited, a.LOngFC:link, a.LOngFC:visited, a.LOngFB:link, a.LOngFB:visited, a.LOngFL:link, a.LOngFL:visited, a.LOngFP:link, a.LOngFP:visited, a.LOngFZ:link, a.LOngFZ:visited {color: #000}
+a.LOngFA:hover {color: #c0c0c0}
+a.LOngFG:hover {color: #d7ac2a}
+a.LOngFD:hover {color: #82add9}
+a.LOngFF:hover {color: #94bd69}
+a.LOngFC:hover {color: #cdcd7d}
+a.LOngFB:hover {color: #d9a693}
+a.LOngFL:hover {color: #9191ff}
+a.LOngFP:hover {color: #d9b8d9}
+a.LOngFZ:hover {color: #93bcc2}
+
+div.MnSpace10, div.MnSpace30 {display: block}
+div.MnSpace10 {margin-bottom: 10px}
+div.MnSpace30 {margin-bottom: 30px}
+
+div.TitreLienboxA, div.TitreLienboxG, div.TitreLienboxD, div.TitreLienboxF, div.TitreLienboxC, div.TitreLienboxB, div.TitreLienboxL, div.TitreLienboxP, div.TitreLienboxZ, div.Lienbox {display: block; margin : 0px 3px 0px 3px; text-align: left; font-size: 12px}
+div.TitreLienboxA {padding: 2px 4px 2px 4px; background-color: #c0c0c0}
+div.TitreLienboxG {padding: 2px 4px 2px 4px; background-color: #d7ac2a}
+div.TitreLienboxD {padding: 2px 4px 2px 4px; background-color: #82add9}
+div.TitreLienboxF {padding: 2px 4px 2px 4px; background-color: #94bd69}
+div.TitreLienboxC {padding: 2px 4px 2px 4px; background-color: #cdcd7d}
+div.TitreLienboxB {padding: 2px 4px 2px 4px; background-color: #d9a693}
+div.TitreLienboxL {padding: 2px 4px 2px 4px; background-color: #9191ff}
+div.TitreLienboxP {padding: 2px 4px 2px 4px; background-color: #d9b8d9}
+div.TitreLienboxZ {padding: 2px 4px 2px 4px; background-color: #93bcc2}
+div.Lienbox {padding : 4px 4px 4px 4px; background-color: #fff;  font-size: 10px}
+div.Lienbox a {color: #000; text-decoration: underline}
+div.Lienbox a:hover {color: #c90}
+
+div.menubox {display: block; margin: 0px 0px 0px 0px; text-align: left; border-bottom: 1px solid #fff}
+div.menubox a:link {color: #000}
+div.menubox a:active {color: #000}
+div.menubox a:visited {color: #333}
+div.MnNiv1, div.MnNiv2 {width: 145px}
+a.MnNiv1A, a.MnNiv1aA, a.MnNiv1G, a.MnNiv1aG, a.MnNiv1D, a.MnNiv1aD, a.MnNiv1F, a.MnNiv1aF, a.MnNiv1C, a.MnNiv1aC, a.MnNiv1B, a.MnNiv1aB, a.MnNiv1L, a.MnNiv1aL, a.MnNiv1P, a.MnNiv1aP, a.MnNiv1Z, a.MnNiv1aZ {font-size : 12px; font-weight : bold; display: block; text-decoration : none; border-top: 1px solid #fff; color : #000; padding : 4px 3px 3px 6px}
+a.MnNiv1A {background-color: #d7d7d7}
+a.MnNiv1G {background-color: #ffcc33}
+a.MnNiv1D {background-color: #99ccff}
+a.MnNiv1F {background-color: #b1e27d}
+a.MnNiv1C {background-color: #e9e98a}
+a.MnNiv1B {background-color: #f0b7a3}
+a.MnNiv1L {background-color: #aaaaff}
+a.MnNiv1P {background-color: #f0ccf0}
+a.MnNiv1Z {background-color: #addee4}
+a.MnNiv1aA, a.MnNiv1aG, a.MnNiv1aD, a.MnNiv1aF, a.MnNiv1aC, a.MnNiv1aB, a.MnNiv1aL, a.MnNiv1aP, a.MnNiv1aZ {background-color: #fff}
+a.MnNiv1A:hover, a.MnNiv1aA:hover, a.MnNiv2A:hover, a.MnNiv2aA:hover {color : #000; background-color: #c0c0c0}
+a.MnNiv1G:hover, a.MnNiv1aG:hover, a.MnNiv2G:hover, a.MnNiv2aG:hover {color : #000; background-color: #d7ac2a}
+a.MnNiv1D:hover, a.MnNiv1aD:hover, a.MnNiv2D:hover, a.MnNiv2aD:hover {color : #000; background-color: #82add9}
+a.MnNiv1F:hover, a.MnNiv1aF:hover, a.MnNiv2F:hover, a.MnNiv2aF:hover {color : #000; background-color: #94bd69}
+a.MnNiv1C:hover, a.MnNiv1aC:hover, a.MnNiv2C:hover, a.MnNiv2aC:hover {color : #000; background-color: #cdcd7d}
+a.MnNiv1B:hover, a.MnNiv1aB:hover, a.MnNiv2B:hover, a.MnNiv2aB:hover {color : #000; background-color: #d9a693}
+a.MnNiv1L:hover, a.MnNiv1aL:hover, a.MnNiv2L:hover, a.MnNiv2aL:hover {color : #000; background-color: #9191ff}
+a.MnNiv1P:hover, a.MnNiv1aP:hover, a.MnNiv2P:hover, a.MnNiv2aP:hover {color : #000; background-color: #d9b8d9}
+a.MnNiv1Z:hover, a.MnNiv1aZ:hover, a.MnNiv2Z:hover, a.MnNiv2aZ:hover {color : #000; background-color: #93bcc2}
+a.MnNiv2A, a.MnNiv2G, a.MnNiv2D, a.MnNiv2F, a.MnNiv2C, a.MnNiv2B, a.MnNiv2L, a.MnNiv2P, a.MnNiv2Z, a.MnNiv2aA, a.MnNiv2aG, a.MnNiv2aD, a.MnNiv2aF, a.MnNiv2aC, a.MnNiv2aB, a.MnNiv2aL, a.MnNiv2aP, a.MnNiv2aZ {font-size : 10px; display: block; text-decoration : none; color : #000; padding : 2px 2px 1px 18px}
+a.MnNiv2A {background-color: #ebebeb}
+a.MnNiv2G {background-color: #ffe082}
+a.MnNiv2D {background-color: #b6dbff}
+a.MnNiv2F {background-color: #c9f0a0}
+a.MnNiv2C {background-color: #f4f4d5}
+a.MnNiv2B {background-color: #ecc8bb}
+a.MnNiv2L {background-color: #cfcfff}
+a.MnNiv2P {background-color: #f6dff6}
+a.MnNiv2Z {background-color: #cdeaed}
+a.MnNiv2aA, a.MnNiv2aG, a.MnNiv2aD, a.MnNiv2aF, a.MnNiv2aC, a.MnNiv2aB, a.MnNiv2aL, a.MnNiv2aP, a.MnNiv2aZ {background-color: #fff}
+
+.MenuHaut, .MenuGauche, .Pub, .NoPrint {display: none}
+#PubH1, #PubH2, #PubD1, #PubD2, #PubD3, #PubB1, #PubB2, #PubG1, #PubG2 {display: none}
+#PubH1 {padding: 10px 0px 15px 0px}
+
+.H_PartNoir, .B_PartNoir {color : #fff; font-size : 12px; padding : 2px 5px 0px 0px}
+.H_PartNoir a:link, .H_PartNoir a:visited, .H_PartNoir a:active, .B_PartNoir a:link, .B_PartNoir a:visited, .B_PartNoir a:active {color: #fff}
+.H_PartNoir a:hover, .B_PartNoir a:hover {color: #fc3}
+.H_PartNoir a, .B_PartNoir a {text-decoration: none}
+
+.copyright {color : #000; font-size : 10px; padding : 8px 0px 0px 0px}
+.H_PartBlanc {color : #000; font-size : 12px; padding : 0px 5px 0px 0px}
+.H_PartBlanc a:link, .H_PartBlanc a:visited, .H_PartBlanc a:active, .copyright a:link, .copyright a:visited, .copyright a:active {color: #000}
+.H_PartBlanc a:hover, .copyright a:hover {color: #d7ac2a}
+.H_PartBlanc a, .copyright a {text-decoration: none}
+
+.ZTitre {color : #000; font-size : 10px; padding : 0px 0px 0px 4px; text-align: left}
+.ZTitre B {font-size : 12px; margin: 0px 10px 0px 5px}
+
+.ZBas {color : #000; font-size : 12px; padding : 0px 0px 0px 4px; text-align: left}
+.ZBas B {margin: 0px 5px 0px 5px}
+.ZBas a:link, .ZBas a:visited, .ZBas a:active {color: #000}
+.ZBas a:hover {color: #3399ff}
+.ZBas a {text-decoration: none}
+
+.ContenuP {padding: 8px 8px 8px 8px; background-color: #fff}
+.ContenuP a:link {color: #0033cc}
+.ContenuP a:active {color: #9933cc}
+.ContenuP a:visited {color: #003399}
+.ContenuP a:hover {color: #3399ff}
+.ContenuP a {text-decoration: none}
+
+.posit {text-align:justify}
+
+a.new:link {color: #ff0000}
+a.new:visited {color: #003399}
+a.new:active {color: #9933cc}
+a.new:hover {color: #3399ff}
+a.new:link, a.new:visited, a.new:active, a.new:hover {text-decoration: underline}
+
+.Ctnu_Spacer_S {display: block; padding: 5px 0px 0px 0px}
+.Ctnu_Titre {margin: 12px 0px 0px 6px}
+.Ctnu_RubrG, .Ctnu_RubrD, .Ctnu_RubrF, .Ctnu_RubrC, .Ctnu_RubrB, .Ctnu_RubrL, .Ctnu_RubrP, .Ctnu_RubrZ {padding : 2px 0px 0px 5px; font-size : 18px; font-weight: bold}
+.Ctnu_RubrG, .Ctnu_RubrG a:link, .Ctnu_RubrG a:visited {color: #d7ac2a}
+.Ctnu_RubrD, .Ctnu_RubrD a:link, .Ctnu_RubrD a:visited {color: #82add9}
+.Ctnu_RubrF, .Ctnu_RubrF a:link, .Ctnu_RubrF a:visited {color: #94bd69}
+.Ctnu_RubrC, .Ctnu_RubrC a:link, .Ctnu_RubrC a:visited {color: #cdcd7d}
+.Ctnu_RubrB, .Ctnu_RubrB a:link, .Ctnu_RubrB a:visited {color: #d9a693}
+.Ctnu_RubrL, .Ctnu_RubrL a:link, .Ctnu_RubrL a:visited {color: #9191ff}
+.Ctnu_RubrP, .Ctnu_RubrP a:link, .Ctnu_RubrP a:visited {color: #d9b8d9}
+.Ctnu_RubrZ, .Ctnu_RubrZ a:link, .Ctnu_RubrZ a:visited {color: #93bcc2}
+.Ctnu_RubrG a:hover, .Ctnu_RubrD a:hover, .Ctnu_RubrF a:hover, .Ctnu_RubrC a:hover, .Ctnu_RubrB a:hover, .Ctnu_RubrL a:hover, .Ctnu_RubrP a:hover, .Ctnu_RubrZ a:hover {color: #000}
+
+.PubD {}
+.PubDcase, .PubDcasea {font-size: 9pt}
+.PubDcase {border: 1px solid #dddddd}
+.PubDcase a:link, .PubDcasea a:link {color: #0033cc}
+.PubDcase a:visited, .PubDcasea a:visited {color: #003399}
+.PubDcase a:active, .PubDcasea a:active {color: #9933cc}
+.PubDcase a:hover, .PubDcasea a:hover {color: #3399ff}
+.PubDcase a, .PubDcasea a {text-decoration: none}
+.PubDcasea {border-left: 1px solid #dddddd; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd}
+.PubDtr {color: #999999; padding : 2px 2px 2px 2px}
+.PubDtx {padding : 2px 2px 2px 2px}
+
+.MiPubPhoto {margin: 2px 0px 2px 2px; float: left}
+.MiPubText {display: block; font-size: 11px; line-height: 12px; margin: 2px 2px 2px 56px}
+.MiPubTitre {font-weight: bold}
+.MiPubMrk {height: 1px; width: 1px; float: left; clear: none; display: inline}
+a.MiPubLien:link, a.MiPubLien:visited, a.MiPubLien:hover, a.MiPubLien:active {display: block; float: left; text-decoration: none}
+a.MiPubLien:link, a.MiPubLien:visited, a.MiPubLien:active {color: #000}
+a.MiPubLien:hover {color: #555}
+
+.VOT_Tab {display: none}
+.VOT_Titr {display: none}
+.VOT_Ctnu {display: none}
