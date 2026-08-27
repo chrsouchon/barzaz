@@ -65,7 +65,7 @@ def main():
             repo.git.lfs("install")
             repo.git.add(".gitattributes")
             repo.git.commit(m="Add .gitattributes")
-            repo.git.push("origin", "main")
+            repo.git.push("origin", "master")
         except:
             print("✓ LFS already installed.")
     else:
@@ -74,7 +74,7 @@ def main():
     try:
         repo.git.add("pusher.py")
         repo.git.commit(m="Add pusher.py")
-        repo.git.push("origin", "main")
+        repo.git.push("origin", "master")
     except:
         print("✓ pusher.py already added.")
     
@@ -83,7 +83,7 @@ def main():
         try:
             repo.git.add(".obsidian")
             repo.git.commit(m="Add .obsidian")
-            repo.git.push("origin", "main")
+            repo.git.push("origin", "master")
         except:
             print("✓ .obsidian already added.")
     
@@ -149,7 +149,7 @@ def main():
                 
                 push_start = time.time()
                 print(f"    ⬆️  Pushing batch...")
-                repo.git.push("origin", "main")
+                repo.git.push("origin", "master")
                 push_time = time.time() - push_start
                 
                 batch_total_time = time.time() - batch_start
@@ -204,7 +204,7 @@ def main():
                 
                 push_start = time.time()
                 print(f"    ⬆️  Pushing LFS batch...")
-                repo.git.push("origin", "main")
+                repo.git.push("origin", "master")
                 push_time = time.time() - push_start
                 
                 batch_total_time = time.time() - batch_start
@@ -264,7 +264,7 @@ def main():
                 
                 push_start = time.time()
                 print(f"    ⬆️  Pushing batch...")
-                repo.git.push("origin", "main")
+                repo.git.push("origin", "master")
                 push_time = time.time() - push_start
                 
                 batch_total_time = time.time() - batch_start
