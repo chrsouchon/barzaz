@@ -1,0 +1,360 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: "Palatino Linotype", Georgia, Serif; BACKGROUND: url(images/azulejo-bg.jpg) #fff fixed; COLOR: #203a56; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+#book {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(images/bordure-horizontale.jpg) fixed repeat-x left top; PADDING-TOP: 0px
+}
+#bordure1 {
+	MARGIN: 0px auto; WIDTH: 985px; BACKGROUND: url(images/bordure-verticale1.gif) repeat-y left top
+}
+#bordure2 {
+	BACKGROUND: url(images/bordure-verticale2.gif) repeat-y right top
+}
+#header {
+	PADDING-BOTTOM: 0px; MARGIN: -292px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 292px; PADDING-TOP: 0px
+}
+#headerlogo {
+	MARGIN: 0px; BACKGROUND: url(images/batel.gif) no-repeat left top; HEIGHT: 292px
+}
+#headerimg {
+	MARGIN: 0px; BACKGROUND: url(images/poseidon.gif) no-repeat right top; HEIGHT: 292px; VERTICAL-ALIGN: bottom
+}
+.description {
+	PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-LEFT: 13px; WIDTH: 495px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; FONT-SIZE: 10px; PADDING-TOP: 82px
+}
+#tibato {
+	PADDING-BOTTOM: 0px; MARGIN: 0px 40px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; HEIGHT: 292px; PADDING-TOP: 0px
+}
+#page {
+	PADDING-BOTTOM: 70px; BACKGROUND-COLOR: #fff; MARGIN: 0px 50px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; PADDING-TOP: 0px
+}
+#breadcrumbs {
+	MARGIN-TOP: 0px
+}
+#content {
+	PADDING-BOTTOM: 50px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 0px; WIDTH: 512px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+#single {
+	PADDING-BOTTOM: 50px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 0px; WIDTH: 512px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+#page-content {
+	PADDING-BOTTOM: 50px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#footer {
+	PADDING-BOTTOM: 0px; MARGIN: -70px auto 0px; PADDING-LEFT: 0px; WIDTH: 985px; PADDING-RIGHT: 0px; HEIGHT: 182px; PADDING-TOP: 0px
+}
+#footer-support {
+	MARGIN: 0px 50px; BACKGROUND: url(images/bordure-footer.jpg) repeat-x left top; HEIGHT: 182px
+}
+#fin-lusi {
+	MARGIN: -185px 5px 0px; BACKGROUND: url(images/fin-lusi.jpg) no-repeat center 50%
+}
+#footer P {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 20px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 70%; PADDING-RIGHT: 0px; PADDING-TOP: 20px
+}
+#peixe-g {
+	BACKGROUND: url(images/peixe-g.gif) no-repeat left bottom; HEIGHT: 182px
+}
+#peixe-d {
+	BACKGROUND: url(images/peixe-d.gif) no-repeat right bottom; HEIGHT: 182px
+}
+SMALL {
+	FONT-SIZE: 10px
+}
+.date-post {
+	COLOR: #888; FONT-SIZE: 12px
+}
+.entry {
+	MARGIN-TOP: 20px
+}
+A.more-link {
+	MARGIN: 10px 0px 20px; DISPLAY: block; COLOR: #6c79a6; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.more-link:hover {
+	COLOR: #97a1c7
+}
+H3.comments {
+	PADDING-BOTTOM: 0px; MARGIN: 40px auto 20px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+H1 {
+	POSITION: absolute; HEIGHT: 105px
+}
+#headerimg H1 {
+	PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 452px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; FONT-FAMILY: "Monotype Corsiva", Georgia, serif; FONT-SIZE: 48px; PADDING-TOP: 0px
+}
+#headerimg A {
+	POSITION: absolute; BOTTOM: 25px; COLOR: #203a56
+}
+#headerimg A:hover {
+	COLOR: #97a1c7
+}
+#sidebar H2 {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 20px; PADDING-TOP: 0px
+}
+H2 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; LETTER-SPACING: normal; PADDING-RIGHT: 0px; FONT-FAMILY: "Monotype Corsiva", Georgia, serif; FONT-SIZE: 32px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-BOTTOM: 0px; MARGIN: 30px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-FAMILY: "Monotype Corsiva", Georgia, serif; FONT-SIZE: 20px; PADDING-TOP: 0px
+}
+.commentlist LI {
+	FONT-WEIGHT: bold
+}
+.commentlist LI .avatar {
+	BORDER-BOTTOM: #eee 1px solid; BORDER-LEFT: #eee 1px solid; PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; PADDING-RIGHT: 2px; BACKGROUND: #fff; FLOAT: right; BORDER-TOP: #eee 1px solid; BORDER-RIGHT: #eee 1px solid; PADDING-TOP: 2px
+}
+.commentlist CITE {
+	FONT-STYLE: normal; FONT-SIZE: 1.1em; FONT-WEIGHT: bold
+}
+.commentlist CITE A {
+	FONT-STYLE: normal; FONT-SIZE: 1.1em; FONT-WEIGHT: bold
+}
+.commentlist P {
+	LINE-HEIGHT: 1.5em; TEXT-TRANSFORM: none; FONT-WEIGHT: normal
+}
+.commentmetadata {
+	FONT-WEIGHT: normal
+}
+CODE {
+	FONT: 1.1em 'Courier New', Courier, Fixed
+}
+ACRONYM {
+	LETTER-SPACING: 0.07em; FONT-SIZE: 0.9em
+}
+ABBR {
+	LETTER-SPACING: 0.07em; FONT-SIZE: 0.9em
+}
+SPAN.caps {
+	LETTER-SPACING: 0.07em; FONT-SIZE: 0.9em
+}
+A {
+	COLOR: #6c79a6; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #97a1c7
+}
+#wp-calendar TH {
+	TEXT-TRANSFORM: capitalize; FONT-STYLE: normal
+}
+.narrowcolumn {
+	PADDING-BOTTOM: 20px; MARGIN: 0px; PADDING-LEFT: 45px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.widecolumn {
+	PADDING-BOTTOM: 20px; MARGIN: 5px 0px 0px 150px; PADDING-LEFT: 0px; WIDTH: 450px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.post {
+	TEXT-ALIGN: justify
+}
+.post HR {
+	DISPLAY: block
+}
+.widecolumn .post {
+	MARGIN: 0px
+}
+.narrowcolumn .postmetadata {
+	PADDING-TOP: 5px
+}
+.widecolumn .postmetadata {
+	MARGIN: 30px 0px
+}
+.widecolumn .smallattachment {
+	TEXT-ALIGN: center; MARGIN: 5px 5px 5px 0px; WIDTH: 128px; FLOAT: left
+}
+.widecolumn .attachment {
+	TEXT-ALIGN: center; MARGIN: 5px 0px
+}
+.postmetadata {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 100px; MARGIN: 20px 0px; WIDTH: 510px; BACKGROUND: url(images/coquillage.jpg) no-repeat center bottom; COLOR: #888; FONT-SIZE: 11px; PADDING-TOP: 10px
+}
+.clear {
+	CLEAR: both
+}
+P IMG {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; MAX-WIDTH: 100%; PADDING-TOP: 0px
+}
+.alignright {
+	FLOAT: right
+}
+.alignleft {
+	FLOAT: left
+}
+.wp-captionalignleft {
+	BORDER-BOTTOM: #70a5cb 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #70a5cb 1px solid; PADDING-BOTTOM: 0px; MARGIN: 8px 10px 5px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; BORDER-TOP: #70a5cb 1px solid; BORDER-RIGHT: #70a5cb 1px solid; PADDING-TOP: 5px
+}
+.wp-captionalignright {
+	BORDER-BOTTOM: #70a5cb 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #70a5cb 1px solid; PADDING-BOTTOM: 0px; MARGIN: 8px 0px 5px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: right; BORDER-TOP: #70a5cb 1px solid; BORDER-RIGHT: #70a5cb 1px solid; PADDING-TOP: 5px
+}
+.postmetadata UL {
+	LIST-STYLE-TYPE: none; DISPLAY: inline
+}
+.postmetadata LI {
+	LIST-STYLE-TYPE: none; DISPLAY: inline
+}
+#sidebar UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+#sidebar UL OL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+#sidebar UL LI {
+	LIST-STYLE-TYPE: none; MARGIN-BOTTOM: 15px
+}
+#sidebar UL P {
+	MARGIN: 5px 0px 8px
+}
+#sidebar UL SELECT {
+	MARGIN: 5px 0px 8px
+}
+#sidebar UL UL {
+	MARGIN: 5px 0px 0px
+}
+#sidebar UL OL {
+	MARGIN: 5px 0px 0px
+}
+OL LI {
+	LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: decimal
+}
+#sidebar UL OL LI {
+	LIST-STYLE-POSITION: outside; LIST-STYLE-TYPE: decimal
+}
+#sidebar UL UL LI {
+	PADDING-BOTTOM: 0px; MARGIN: 3px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#sidebar UL OL LI {
+	PADDING-BOTTOM: 0px; MARGIN: 3px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#sidebar #searchform #s {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 120px; PADDING-RIGHT: 2px; PADDING-TOP: 0px
+}
+#sidebar #searchsubmit {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 0px
+}
+.entry FORM {
+	TEXT-ALIGN: center
+}
+SELECT {
+	WIDTH: 130px
+}
+#commentform INPUT {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #35446a; MARGIN: 5px 0px 1px; PADDING-LEFT: 2px; WIDTH: 180px; PADDING-RIGHT: 2px; FONT-FAMILY: "Monotype Corsiva", Georgia, serif; COLOR: #fff; FONT-SIZE: 20px; BORDER-TOP: medium none; CURSOR: pointer; BORDER-RIGHT: medium none; PADDING-TOP: 2px
+}
+#commentform INPUT:hover {
+	BACKGROUND-COLOR: #e2e9f6; COLOR: #35446a
+}
+#commentform TEXTAREA {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 2px; WIDTH: 100%; PADDING-RIGHT: 2px; PADDING-TOP: 2px
+}
+#commentform #submit {
+	MARGIN: 0px; FLOAT: right
+}
+.alt {
+	MIN-HEIGHT: 50px; COLOR: #203a56; FONT-SIZE: 11px
+}
+.commentlist {
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.commentlist LI {
+	PADDING-BOTTOM: 3px; LIST-STYLE-TYPE: none; MARGIN: 15px 0px 3px; PADDING-LEFT: 55px; PADDING-RIGHT: 10px; BACKGROUND: url(images/batocom.gif) no-repeat left top; FONT-SIZE: 11px; PADDING-TOP: 0px
+}
+.commentlist P {
+	MARGIN: 10px 5px 10px 0px
+}
+#commentform P {
+	MARGIN: 5px 0px
+}
+.nocomments {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.commentmetadata {
+	MARGIN: 0px; DISPLAY: block
+}
+#adsense-thematique {
+	BACKGROUND-COLOR: #fff; MARGIN: 0px auto 30px; WIDTH: 730px
+}
+#sidebar {
+	BORDER-LEFT: #70a5cb 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: #fff; MARGIN: 0px 0px 10px 25px; PADDING-LEFT: 15px; WIDTH: 300px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+#sidebar FORM {
+	MARGIN: 0px
+}
+#searchsubmit {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BACKGROUND: #35446a; COLOR: #fff; BORDER-TOP: medium none; CURSOR: pointer; BORDER-RIGHT: medium none
+}
+#searchsubmit:hover {
+	BACKGROUND: #e2e9f6; COLOR: #35446a
+}
+#calendar_wrap {
+	MARGIN-TOP: 5px
+}
+#wp-calendar {
+	MARGIN: 10px 0px; WIDTH: 200px; EMPTY-CELLS: show
+}
+#wp-calendar #next A {
+	TEXT-ALIGN: right; PADDING-RIGHT: 10px
+}
+#wp-calendar #prev A {
+	TEXT-ALIGN: left; PADDING-LEFT: 10px
+}
+#wp-calendar A {
+	DISPLAY: block
+}
+#wp-calendar TD {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 3px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 3px
+}
+ACRONYM {
+	CURSOR: help
+}
+ABBR {
+	CURSOR: help
+}
+SPAN.caps {
+	CURSOR: help
+}
+ACRONYM {
+	BORDER-BOTTOM: #999 1px dashed
+}
+ABBR {
+	BORDER-BOTTOM: #999 1px dashed
+}
+BLOCKQUOTE {
+	FONT-STYLE: italic; MARGIN: 15px 0px 0px; PADDING-LEFT: 35px; BACKGROUND: url(images/quote.jpg) no-repeat left top; COLOR: #888; FONT-SIZE: 12px
+}
+BLOCKQUOTE CITE {
+	MARGIN: 5px 0px 0px; DISPLAY: block
+}
+.center {
+	TEXT-ALIGN: center
+}
+.hidden {
+	DISPLAY: none
+}
+HR {
+	DISPLAY: none
+}
+A IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.navigation {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 50px; DISPLAY: block
+}
+.aligncenter {
+	DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+DIV.aligncenter {
+	DISPLAY: block; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.wp-caption {
+	BORDER-BOTTOM: #70a5cb 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #70a5cb 1px solid; PADDING-BOTTOM: 0px; MARGIN: 8px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: #70a5cb 1px solid; BORDER-RIGHT: #70a5cb 1px solid; PADDING-TOP: 5px
+}
+.wp-caption P.wp-caption-text {
+	PADDING-BOTTOM: 2px; LINE-HEIGHT: 17px; FONT-STYLE: italic; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 11px; PADDING-TOP: 5px
+}
+.alignright IMG {
+	TEXT-ALIGN: center; MARGIN: 0px 0px 6px 5px; DISPLAY: block
+}
+.alignleft IMG {
+	TEXT-ALIGN: center; MARGIN: 0px 0px 6px 5px; DISPLAY: block
+}
+.button-wikio {
+	MARGIN: 20px auto; WIDTH: 120px
+}
