@@ -1,0 +1,48 @@
+on:
+  workflow_call:
+    inputs:
+      message:
+        type: string
+        required: true
+        description: The message to commit
+  push:
+    paths:
+      - 'robots.json'
+      - '.github/workflows/**'
+      - 'code/**'
+    branches:
+      - "main"
+
+jobs:
+  ai-robots-txt:
+    runs-on: ubuntu-latest
+    name: ai-robots-txt
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - run: |
+          pip install beautifulsoup4
+          git config --global user.name "ai.robots.txt"
+          git config --global user.email "ai.robots.txt@users.noreply.github.com"
+          git log -1
+          git status
+          echo "Updating robots.txt and table-of-bot-metrics.md if necessary ..."
+          python code/robots.py --convert
+          echo "... done."
+          git --no-pager diff
+          git add -A
+          if [ -z "$(git diff --staged)" ]; then
+            # To have the action run successfully, if no changes are staged, we
+            # manually skip the later commits because they fail with exit code 1
+            # and this would then display as a failure for the Action.
+            echo "No staged changes to commit. Skipping commit and push."
+            exit 0
+          fi
+          if [ -n "${{ inputs.message }}" ]; then
+            git commit -m "${{ inputs.message }}"
+          else
+            git commit -m "${{ github.event.head_commit.message }}"
+          fi
+          git push
+        shell: bash
