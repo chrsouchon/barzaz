@@ -1,0 +1,938 @@
+<html>
+<head>
+<style type="text/css">
+body {
+	
+font-size: 12px;
+	
+font-family: "Palatino Linotype", Georgia, Serif;
+	
+background: #fff url(images/azulejo-bg.jpg) fixed;
+	
+color: #203a56;
+	margin: 0;
+	
+padding: 0;
+
+	}
+
+	
+
+#book {
+	
+background: url(images/bordure-horizontale.jpg) top left repeat-x fixed;
+	
+margin: 0;
+	
+padding: 0;
+}
+
+
+
+#bordure1 {
+	
+background: url(images/bordure-verticale1.gif) top left repeat-y;
+	margin: 0 auto;
+	
+width: 985px;
+}
+
+
+
+#bordure2 {
+	
+background: url(images/bordure-verticale2.gif) top right repeat-y;
+}
+
+
+#header {
+	
+margin: -292px 0 0 0;
+	
+padding: 0;
+	
+height: 292px;
+}
+
+
+#headerlogo {
+	
+margin: 0 /*-41px*/;
+	
+height: 292px;
+	
+background: url(images/batel3.png) top left no-repeat;
+}
+
+
+
+#headerimg {
+	
+margin: 0;
+	
+height: 292px;
+	
+background: url(images/poseidon.gif) top right no-repeat;
+	vertical-align: bottom;
+	}
+
+
+
+.description {
+	
+font-size: 10px;
+	
+width: 495px;
+	
+letter-spacing: normal;
+	
+padding: 82px 0 5px 13px;
+	
+margin: 0;
+}
+
+
+
+#tibato {
+	
+margin: 0 40px;
+	
+padding: 0;
+	
+height: 292px;
+}
+		
+
+
+#page {
+	
+margin: 0 50px;
+	
+padding: 0 15px 70px 15px;
+	
+background-color: #fff;
+	}
+
+
+
+#breadcrumbs {
+	
+margin-top: 0;
+}
+
+
+
+#content {
+	
+padding: 0 0 50px 0;
+	
+float: left;
+	
+width: 512px;
+	
+background-color: #fff;
+	}
+	
+
+
+#single {
+	
+padding: 0 0 50px 0;
+	
+float: left;
+	
+width: 512px;
+	
+background-color: #fff;
+	}
+
+
+#page-content {
+	
+padding: 0 0 50px 0;
+}
+
+
+
+#footer {
+	
+height: 182px;
+	
+padding: 0;
+	
+margin: -70px auto 0 auto;
+	
+width: 985px;
+	}
+
+
+
+#footer-support {
+	
+height: 182px;
+	
+margin: 0 50px;
+	
+background: url(images/bordure-footer.jpg) top left repeat-x;
+}
+
+
+
+#fin-lusi {
+	
+background: url(images/fin-lusi.jpg) center no-repeat;
+	
+margin: -185px 5px 0 5px;
+}
+
+
+
+#footer p {
+	
+margin: 0 auto;
+	padding: 20px 0;
+	
+text-align: center;
+	
+width: 70%;
+	}
+	
+
+
+#peixe-g {
+	
+height: 182px;
+	
+background: url(images/peixe-g.gif) bottom left no-repeat;
+}
+
+
+
+#peixe-d {
+	
+height: 182px;
+	
+background: url(images/peixe-d.gif) bottom right no-repeat;
+}
+
+
+small {
+	
+font-size: 10px;
+}
+
+
+.date-post {
+	
+font-size: 12px;
+	
+color: #888;
+}
+
+
+
+.entry {
+	
+margin-top: 20px;
+}
+
+
+
+a.more-link {
+
+font-size: 14px;
+
+font-weight: bold;
+
+display: block;
+
+color: #6c79a6;
+
+text-decoration: none;
+
+margin: 10px 0 20px 0;
+}
+
+
+
+a:hover.more-link {
+
+color: #97a1c7;
+}
+
+
+
+
+/*	Begin Headers */
+
+
+h3.comments {
+	
+padding: 0;
+	
+margin: 40px auto 20px ;
+}
+
+h1 {
+	
+height: 105px;
+	
+position: absolute;
+}
+
+
+
+#headerimg h1 {
+	
+font-size: 48px;
+	
+font-family: "Monotype Corsiva", Georgia, serif;
+	
+letter-spacing: normal;
+	
+padding: 0 0 5px 10px;
+	
+margin: 0;
+	width: 452px;
+}
+	
+
+
+#headerimg a {
+	
+color: #203a56;
+	
+position: absolute; 
+	bottom: 25px; 
+
+}
+
+
+
+#headerimg a:hover {
+	
+color: #97a1c7;
+}
+
+
+#sidebar h2 {
+	
+font-size: 20px;
+	
+margin: 0;
+	
+padding: 0;
+	}
+
+
+
+h2 {
+	
+font-family: "Monotype Corsiva", Georgia, serif;
+	letter-spacing: normal;
+	
+font-size: 32px;
+	
+margin: 0;
+	padding: 0;
+	
+text-align: left;
+	}
+
+
+h3 {
+	
+font-family: "Monotype Corsiva", Georgia, serif;
+	font-size: 20px;
+	padding: 0;
+	margin: 30px 0 0;
+	}
+
+.commentlist li {
+	font-weight: bold;
+	}
+
+.commentlist li .avatar { 
+	float: right;
+	border: 1px solid #eee;
+	padding: 2px;
+	background: #fff;
+	}
+
+
+.commentlist cite, .commentlist cite a {
+	
+font-weight: bold;
+	font-style: normal;
+	
+font-size: 1.1em;
+	
+}
+
+
+.commentlist p {
+	font-weight: normal;
+	
+line-height: 1.5em;
+	text-transform: none;
+	}
+
+.commentmetadata {
+	font-weight: normal;
+	}
+
+
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+	}
+
+acronym, abbr, span.caps
+{
+	font-size: 0.9em;
+	letter-spacing: .07em;
+	}
+
+a {
+	color: #6c79a6;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #97a1c7;
+	}
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	}
+/* End Typography & Colors */
+
+
+/* Begin Structure */
+
+.narrowcolumn {
+	padding: 0 0 20px 45px;
+	margin: 0px 0 0;
+	}
+
+.widecolumn {
+	padding: 10px 0 20px 0;
+	margin: 5px 0 0 150px;
+	width: 450px;
+	}
+
+.post {
+	text-align: justify;
+	}
+
+.post hr {
+	display: block;
+	}
+
+.widecolumn .post {
+	margin: 0;
+	}
+
+.narrowcolumn .postmetadata {
+	padding-top: 5px;
+	}
+
+
+
+.widecolumn .postmetadata {
+	
+margin: 30px 0;
+	}
+
+
+
+.widecolumn .smallattachment {
+	
+text-align: center;
+	
+float: left;
+	width: 128px;
+	
+margin: 5px 5px 5px 0px;
+}
+
+
+
+.widecolumn .attachment {
+	text-align: center;
+	margin: 5px 0px;
+}
+
+.postmetadata {
+	font-size: 11px;
+	color: #888;
+	text-align: justify;
+	width: 510px;
+	margin: 20px 0;
+	padding-bottom: 100px;
+	padding-top: 10px;
+	background: url(images/coquillage.jpg) bottom center no-repeat;
+}
+
+.clear {
+	clear: both;
+}
+
+/* End Structure */
+
+/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+.wp-captionalignleft {
+float: left;
+border:1px solid #70a5cb;
+margin:8px 10px 5px 0;
+padding:5px 0 0;
+text-align:center;
+}	
+
+.wp-captionalignright {
+float: right;
+border:1px solid #70a5cb;
+margin:8px 0 5px 10px;
+padding:5px 0 0;
+text-align:center;
+}
+
+/* End Images */
+
+
+.postmetadata ul, .postmetadata li {
+	display: inline;
+	list-style: none;
+	}
+
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	}
+
+#sidebar ul li {
+	list-style: none;
+	margin-bottom: 15px;
+	}
+
+#sidebar ul p, #sidebar ul select {
+	margin: 5px 0 8px;
+	}
+
+#sidebar ul ul, #sidebar ul ol {
+	margin: 5px 0 0 0;
+	}
+
+ol li, #sidebar ul ol li {
+	list-style: decimal outside;
+	}
+
+#sidebar ul ul li, #sidebar ul ol li {
+	margin: 3px 0 0;
+	padding: 0;
+	}
+/* End Entry Lists */
+
+
+
+/* Begin Form Elements */
+
+#sidebar #searchform #s {
+	width: 120px;
+	padding: 0 2px 0 0;
+	}
+
+#sidebar #searchsubmit {
+	padding: 0 1px;
+	}
+
+.entry form { /* This is mainly for password protected posts, makes them look better. */
+	text-align:center;
+	}
+
+select {
+	width: 130px;
+	}
+
+#commentform input {
+	font-family: "Monotype Corsiva", Georgia, serif;
+	font-size: 20px;
+	width: 180px;
+	padding: 2px;
+	margin: 5px 0px 1px 0;
+	background-color: #35446a;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	}
+#commentform input:hover {
+	background-color: #e2e9f6;
+	color:#35446a;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+#commentform #submit {
+	margin: 0;
+	float: right;
+	}
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.alt {
+	font-size: 11px;
+	color: #203a56;
+	min-height: 50px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	background: url(images/batocom.gif) top left no-repeat;
+	margin: 15px 0 3px;
+	padding: 0 10px 3px 55px;
+	list-style: none;
+	font-size: 11px;
+	}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+	}
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+/* End Comments */
+
+#adsense-thematique {
+	width: 730px;
+	margin: 0 auto 30px auto;
+	background-color: #fff;
+}
+
+/* Begin Sidebar */
+#sidebar
+{
+	padding: 0 0 0 15px;
+	width: 300px;
+	float: left;
+	border-left: #70a5cb solid 1px;
+	margin: 0 0 10px 25px;
+	background-color: #fff;
+	}
+
+#sidebar form {
+	margin: 0;
+	}
+	
+#searchsubmit {
+	background:#35446a;
+	color:#fff;
+	cursor:pointer;
+	border: none;
+}
+#searchsubmit:hover {
+	background:#e2e9f6;
+	color: #35446a;
+}
+/* End Sidebar */
+
+/* Begin Calendar */
+#calendar_wrap {
+	margin-top: 5px;
+}
+
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px 0;
+	width: 200px;
+	}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+	}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+	}
+
+#wp-calendar a {
+	display: block;
+	}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+	}
+
+/* End Calendar */
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps {
+	cursor: help;
+	}
+
+acronym, abbr {
+	border-bottom: 1px dashed #999;
+	}
+
+blockquote {
+	background: url(images/quote.jpg) top left no-repeat;
+	margin: 15px 0 0 0;
+	padding-left: 35px;
+	font-style: italic;
+	font-size: 12px;
+	color: #888;
+	}
+
+blockquote cite {
+	margin: 5px 0 0;
+	display: block;
+	}
+
+.center {
+	text-align: center;
+	}
+
+.hidden {
+	display: none;
+	}
+
+hr {
+	display: none;
+	}
+
+a img {
+	border: none;
+	}
+
+.navigation {
+	display: block;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+/* Captions */
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	padding: 5px 0 0 0;
+	margin: 8px 0;
+	border: #70a5cb solid 1px;	
+	text-align: center;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	font-style: italic;
+	line-height: 17px;
+	padding: 5px 0 2px 0;
+	margin: 0;
+}
+
+.alignright img {
+	margin: 0 0 6px 5px;
+	display: block;
+	text-align: center;
+	}
+
+.alignleft img {
+	margin: 0 0 6px 5px;
+	display: block;
+	text-align: center;
+	}
+.button-wikio {
+margin: 20px auto;
+width: 120px;
+}
+</style>
+
+<!--što peča  težit lić-->
+ 
+<title>Oj Vojvodo Sindjeliću!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></meta>
+<META Name="author" content="Christian Souchon">
+<META Name="description" content="Fichier Mp3 File, paroles en serbe et en français du chant "Oj Vojvodo Sindjelicu">
+</head>
+
+<body>
+<doctype html="" lang="fr-FR">
+<div id="book">
+<div id="bordure1">
+<div id="bordure2">
+<div id="tibato"></div>
+<div id="header">
+<div id="headerlogo">
+<div id="headerimg">
+<center>
+</div></div></div>
+
+<div id="page">
+
+<div class="navigation">
+<a href="nisdanas.html">Niš d'hier et aujourd'hui</a><br>
+<font size=-2><i>Cliquer sur le liens ci-dessus pour retourner à la page correspondante </i></font>
+</div>
+<center>
+
+<h2> Oj Vojvodo Sindjeliću!</h2>
+
+<div class="wp-caption alignnone" style="width: 860px;">
+<table><td width=50%> 
+1. Oj, vojvodo Sindjeliću!<br>
+Srpski sine od Resave slavne!<br>
+Ti si znao Srbina zakleti,<br>
+Ako treba za slobodu mreti.<br> 
+<br> 
+2. Puška puce, boj se bije,<br>
+A Sindjelić ljutu bitku bije.<br>
+Ljutu bitku bije za slobodu,<br>
+za slobodu srpskome narodu.<br> 
+<br>
+3. Oj vojvodo, ti si pao!<br>
+Ali dušman jos od tebe strepi.<br>
+Ti si turske posekao glave,<br>
+Zato tebe Srbi rado slave.<br>
+<br>
+4. Oj vojvodo Sindjeliću!<br>
+Srpski sine od Resave slavne!<br>
+Milije je Srbinu umreti<br>
+Nego robom ikada živeti!<br>
+Nego robom do groba živeti!<br>
+</td>
+<td width=50%>
+1. O Voïvode Sindjelić!<br>
+Serbe, fils de la glorieuse Resava!<br>
+Tu as su faire jurer aux Serbes,<br>
+S'il le fallait, de mourir pour la liberté.<br>
+<br>
+2. Coups de feu et combat qui fait rage:<br>
+Ah, Sindjelić se bat comme un lion.<br>
+Liberté, ta conquête est bien âpre,<br> 
+Pût-il aux Serbes en faire  don!<br>
+<br>
+3. O Voïvode tu tombas!<br>
+Mais l'ennemi tremble à ton nom!<br>
+Combien de têtes turques furent tranchées!<br>
+Les Serbes t'en sont vivement reconnaissants.<br>
+<br>
+4. O Voïvode Sindjelić!<br>
+Serbe, fils de la glorieuse Resava!<br>
+Un Serbe aime mieux mourir<br>
+Que vivre jamais dans l'esclavage,<br>
+Qu'y demeurer jusqu'au tombeau!<br>
+<br>
+</td></table>
+</div>
+<div class="wp-caption alignnone" style="width: 860px;">
+<center><img src="photos/sindstat.jpg"><br>
+<i>Buste de Stevan Sinđelić, mémorial du mont Čegar</i></center><br>
+<br>
+<h2>Extrait de Wikipédia:</h2>
+<p>
+</center>
+
+<b>Stevan Sinđelić</b><br>
+(en serbe cyrillique : Стеван Синђелић ; né le 19 mai 1770 à Vojska - mort le 31 mai 1809 au mont Čegar) était l'un des chefs ("vojvoda") du <i>Premier soulèvement serbe contre les Ottomans</i>.<br>
+<br>
+Stevan Sinđelić conduisait les rebelles à partir de la rivière Resava et commença par battre les Turcs près de <i>Medveđa</i>. Il participa également aux batailles d’<i>Ivankovac</i> (1805) et de <i>Delingrad</i> (1806) ; il libéra <i>Ćuprija, Paraćin</i> et <i>Ražanj</i>.<br>
+<br>
+C'est à la suite de la bataille du <b>mont Čegar</b> qu'il est devenu un personnage mythique.<br>
+<br>
+<b>La bataille du Mont Čegar (19 mai 1809)</b><br>
+Dans la première tranchée sur le mont Čegar, il était accompagné de <i>3 000 soldats</i> et disposait d'une grande réserve de munitions. Les commandants <i>Hajduk Veljko</i> et <i>Petar Dobrnjac</i> s'étaient retirés avec leurs armées. Quand les Turcs apprirent que ces deux chefs étaient partis et que la position des Serbes s'en trouvait affaiblie, ils sortirent de la <b>forteresse de Niš</b>, le <b>19 mai 1809</b> et marchèrent contre les troupes de Sinđelić avec <i>16 000 hommes</i> et <i>quatre canons</i>. La bataille eut lieu au <i>mont Čegar,à côté de Niš</i>. 
+Les Turcs lancèrent quatre vagues d'attaques mais se firent repousser à chaque fois. Les Turcs lancèrent alors toute leur force dans un assaut. Stevan, voyant la défaite proche, hurla « Mes frères, se sauve qui peut et qui veut, je vous libère de votre serment!».<br>
+<b>Puis après avoir attiré un grand nombre de Turcs vers lui, il se sacrifia  en tirant dans un baril de poudre qui était à côté de lui, tuant un grand nombre d’adversaires.</b><br>
+Cette bataille coûta la vie à <b>3 000 Serbes</b> et environ <b>10 000 Turcs</b>. Chez les Serbes, seul Petko, l'écuyer de Stevan, survécut. Il rapporta l'histoire de la bataille une fois revenu parmi les Serbes.<br>
+<br>
+<b> La Tour des crânes</b><br>
+Après la retraite de l’armée serbe, <b>Hurşid Ahmed Paşa</b>, qui commandait l’armée ottomane, fit élever une tour à Niš avec les crânes des soldats serbes tués au cours de la bataille, en signe d’avertissement pour tous les rebelles. Le crâne de Stevan Sinđelić fut placé au sommet de la tour. Les Serbes appelèrent cette tour <b>Ćele kula</b> (la Tour des crânes).<br>
+
+<br>
+La tour resta en place après 1878, lorsque Niš fut libérée de la domination ottomane. En 1892, une chapelle fut construite pour honorer les morts de la bataille du mont Čegar.<br>
+En <b>1833</b>, le poète <b>Lamartine</b> fit apposer une plaque sur la tour. On peut y lire les mots suivants :<br>
+ <i>« Qu'ils laissent subsister ce monument ! Il apprendra à leurs enfants ce que vaut l'indépendance d'un peuple, en leur montrant à quel prix leurs pères l'ont payée ».</i><br>
+<br>
+On peut ajouter à l'exposé très complet de Wikipédia qu'à l'origine la tour comptait <b>952 crânes</b> et qu'il en reste aujourd'hui <b>59</b>.
+Par ailleurs, le commandant turc chargea des fourreurs de détacher la peau des crânes et il fit  envoyer ces macabres baudruches bourrées de coton au Sultan, à Istamboul.<br>
+La strophe 3 indique que les mentalités n'étaient guère différentes dans les deux camps. D'ailleurs,les mots importants utilisés dans le chant et à propos de ces événements tragiques sont d'origine turque: "dušman", l'ennemi, "Hajduk", le brigand, et les sinistres "Ćele" et "kula", crâne et tour!
+</p>
+<center>
+
+<table width=100%><td width=50% align=center>
+<img src="photos/celekula.jpg"> 
+</td>
+<td width=50% align=center>
+<img src="photos/celechap.jpg" > 
+</td></table>
+<br>
+
+<i>Tour des Crânes de Niš et la chapelle de 1892</i><br>
+<br>
+
+<Embed  height="50"  SRC="sons/sindjeli.mp3" autostart="true"><br>
+<a href="sons/sindjeli.mp3">O Vojvodo Sindjeliću!</a><br>
+<i>Mélodie "O Vojvodo Sinđeliću!" chantée par Radisa Urošević</i>.<br>
+On remarquera le rythme de ce chant patriotique: c'est celui du "kolo", la danse serbe par excellence.
+</div>
+
+</div>
+</div>
+</div></div>
+
+<div id="footer">
+<div id="footer-support"></div>
+<div id="fin-lusi">
+<div id="peixe-g">
+<div id="peixe-d">
+</div></div></div>
+</div>
+
+
+</doctype>
+
+
+
+
+
+</body>
+</html>
