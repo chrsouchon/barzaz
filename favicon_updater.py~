@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+"""
+HTML Favicon Updater
+Replaces or adds favicon links in all HTML files in a directory.
+"""
+
+import os
+import glob
+from pathlib import Path
+from bs4 import BeautifulSoup
+import argparse
+
+def update_favicon_in_file(file_path, new_favicon_url):
+    """
+    Update favicon link in a single HTML file.
+    
+    Args:
+        file_path (str): Path to the HTML file
+        new_favicon_url (str): New favicon URL to use
+    
+    Returns:
+        bool: True if file was modified, False otherwise
+    """
+    try:
+        # Read the HTML file
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+        
+        # Parse HTML with BeautifulSoup
+        soup = BeautifulSoup(content, 'html.parser')
+        
+        # Find existing favicon links
+        existing_favicons = soup.find_all('link', rel='icon')
+        favicon_updated = False
+        
+        # Check if we need to replace existing favicon
+        for link in existing_favicons:
+            href = link.get('href', '')
+            if 'goelan.jpg' in href:
+                link['href'] = new_favicon_url
+                favicon_updated = True
+                print(f"  ✓ Replaced favicon: {href} → {new_favicon_url}")
+        
+        # If no existing favicon found, add one to the head
+        if not existing_favicons:
+            head = soup.find('head')
+            if head:
+                new_favicon = soup.new_tag('link', rel='icon', type='image/x-icon', href=new_favicon_url)
+                head.append(new_favicon)
+                favicon_updated = True
+                print(f"  ✓ Added new favicon: {new_favicon_url}")
+        
+        # Write back to file if changes were made
+        if favicon_updated:
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(str(soup))
+            return True
+        else:
+            print(f"  - No changes needed")
+            return False
+            
+    except Exception as e:
+        print(f"  ✗ Error processing {file_path}: {e}")
+        return False
+
+def update_favicons_in_directory(directory_path, new_favicon_url):
+    """
+    Update favicon links in all HTML files in a directory.
+    
+    Args:
+        directory_path (str): Path to the directory containing HTML files
+        new_favicon_url (str): New favicon URL to use
+    """
+    directory = Path(directory_path)
+    
+    if not directory.exists():
+        print(f"Error: Directory '{directory_path}' does not exist.")
+        return
+    
+    if not directory.is_dir():
+        print(f"Error: '{directory_path}' is not a directory.")
+        return
+    
+    # Find all HTML files
+    html_files = list(directory.glob('*.html')) + list(directory.glob('*.htm'))
+    
+    if not html_files:
+        print(f"No HTML files found in '{directory_path}'")
+        return
+    
+    print(f"Found {len(html_files)} HTML file(s) in '{directory_path}'")
+    print(f"New favicon URL: {new_favicon_url}")
+    print("-" * 60)
+    
+    updated_count = 0
+    
+    for html_file in html_files:
+        print(f"Processing: {html_file.name}")
+        if update_favicon_in_file(html_file, new_favicon_url):
+            updated_count += 1
+    
+    print("-" * 60)
+    print(f"Summary: {updated_count} file(s) updated out of {len(html_files)} processed.")
+
+def main():
+    """Main function with command line argument parsing."""
+    parser = argparse.ArgumentParser(
+        description='Update favicon links in HTML files',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python favicon_updater.py /path/to/html/files
+  python favicon_updater.py . --url https://example.com/favicon.ico
+  python favicon_updater.py ./website --url https://chrsouchon.fr/logo/goelan.jpg
+        """
+    )
+    
+    parser.add_argument(
+        'directory',
+        nargs='?',
+        default='.',
+        help='Directory containing HTML files (default: current directory)'
+    )
+    
+    parser.add_argument(
+        '--url',
+        default='https://chrsouchon.fr/logo/goelan.jpg',
+        help='New favicon URL (default: https://chrsouchon.fr/logo/goelan.jpg)'
+    )
+    
+    parser.add_argument(
+        '--recursive',
+        '-r',
+        action='store_true',
+        help='Process subdirectories recursively'
+    )
+    
+    args = parser.parse_args()
+    
+    if args.recursive:
+        # Process recursively
+        directory = Path(args.directory)
+        html_files = list(directory.rglob('*.html')) + list(directory.rglob('*.htm'))
+        
+        if not html_files:
+            print(f"No HTML files found in '{args.directory}' (recursive)")
+            return
+        
+        print(f"Found {len(html_files)} HTML file(s) in '{args.directory}' (recursive)")
+        print(f"New favicon URL: {args.url}")
+        print("-" * 60)
+        
+        updated_count = 0
+        for html_file in html_files:
+            print(f"Processing: {html_file.relative_to(directory)}")
+            if update_favicon_in_file(html_file, args.url):
+                updated_count += 1
+        
+        print("-" * 60)
+        print(f"Summary: {updated_count} file(s) updated out of {len(html_files)} processed.")
+    else:
+        # Process single directory
+        update_favicons_in_directory(args.directory, args.url)
+
+if __name__ == "__main__":
+    main()
