@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean up disk space
+        run: |
+          echo "Disk space before cleanup:"
+          df -h
+          # Remove Docker images (if any)
+          docker image prune -af || true
+          # Remove unused packages
+          sudo apt-get clean
+          # Remove old logs, caches, etc.
+          rm -rf ~/.cache/pip
+          rm -rf ~/.npm
+          rm -rf ~/actions-runner/_work/_temp/*
+          echo "Disk space after cleanup:"
+          df -h
+      # ...other steps...
