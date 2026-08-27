@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MICHEL GALIANA vous accueille ...
+  </title>
+  <meta content="Christian Souchon" name="author"/>
+  <meta content="Textes et informations relatifs &agrave; l'oeuvre de Michel Galiana, Texts and Information to Michel Galiana's work" name="description"/>
+  <meta content="Michel Galiana, Michel Souchon, Christian Souchon, Po&eacute;sie, Poetry, In Memoriam, D'un livre d'heures, Le songe du verger, Out of a Book of Hours, The Dream in the Orchard" name="keywords"/>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .splash-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            max-width: 80%;
+            z-index: 10;
+        }
+        
+        .splash-container img {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .skip-intro {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 20;
+        }
+        
+        .skip-intro a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .skip-intro a:hover {
+            text-decoration: underline;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        .fade-out {
+            animation: fadeOut 1s ease-in-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        
+        @media (max-width: 768px) {
+            .splash-container {
+                font-size: 16px;
+                max-width: 90%;
+                padding: 20px;
+            }
+            
+            .skip-intro {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+  </style>
+  <link href="https://chrsouchon.fr/logo/goelan.jpg" rel="icon" type="image/x-icon"/>
+ </head>
+ <body>
+  <div class="splash-container" id="splash-container">
+   <div id="splash-content">
+   </div>
+  </div>
+  <div class="skip-intro">
+   [
+   <a href="galiana/indexgen.html">
+    Sauter l'introduction - Skip Intro
+   </a>
+   ]
+  </div>
+  <script>
+   // Preload images
+        const preloadImages = ["hermesbn.jpg"];
+        const intervals = 4000; // 4 seconds
+        const targetDestination = "entree.html";
+        
+        const splashMessages = [
+            '<img src="hermesbn.jpg" alt="Michel Galiana"> MICHEL GALIANA',
+            'MICHEL GALIANA fut un poète de la solitude et du stoïcisme..... MICHEL GALIANA was a lonesome and stoical poet',
+            'Son oeuvre est un hymne vibrant à la BEAUTE ......His work has become a hymn to BEAUTY',
+            'Car peu m\'importe, à présent que la nuit monte, ......For I don\'t care, now that darkness is coming down,',
+            'N\'avoir franchi ces portes où j\'ai heurté, ......... If the doors at which I had knocked denied entry',
+            'Si j\'ai connu, si l\'amertume surmonte, ......Since I could, even by bitterness outdone',
+            'Cette douceur qui s\'appelle éternité ....... Experience the soft bliss that\'s called eternity.'
+        ];
+        
+        let currentIndex = 0;
+        const splashContainer = document.getElementById('splash-container');
+        const splashContent = document.getElementById('splash-content');
+        
+        // Preload images
+        function preloadImageAssets() {
+            preloadImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+        
+        function displaySplash() {
+            if (currentIndex < splashMessages.length) {
+                // Fade out current content
+                splashContent.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    // Update content
+                    splashContent.innerHTML = splashMessages[currentIndex];
+                    
+                    // Remove fade-out and add fade-in
+                    splashContent.classList.remove('fade-out');
+                    splashContent.classList.add('fade-in');
+                    
+                    // Remove fade-in class after animation
+                    setTimeout(() => {
+                        splashContent.classList.remove('fade-in');
+                    }, 1000);
+                    
+                    currentIndex++;
+                }, 500); // Half second for fade out
+                
+                setTimeout(displaySplash, intervals);
+            } else {
+                // Redirect to target destination
+                window.location.href = targetDestination;
+            }
+        }
+        
+        // Initialize the page
+        function initializePage() {
+            preloadImageAssets();
+            
+            // Start the splash sequence after a short delay
+            setTimeout(() => {
+                displaySplash();
+            }, 500);
+        }
+        
+        // Start when page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
+        
+        // Handle window resize to keep content centered
+        window.addEventListener('resize', () => {
+            // Content stays centered with CSS, no need for manual positioning
+        });
+  </script>
+ </body>
+</html>
