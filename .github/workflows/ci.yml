@@ -1,0 +1,215 @@
+name: Cleanup Temp Files
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+  schedule:
+    # Run cleanup weekly on Sundays at 2 AM UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+    # Allow manual triggering
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display initial disk usage
+        run: |
+          echo "=== Initial Disk Usage ==="
+          df -h
+          echo ""
+          echo "=== Initial /tmp directory size ==="
+          du -sh /tmp/* 2>/dev/null | head -20 || echo "No files in /tmp"
+          echo ""
+
+      - name: Clean Docker resources
+        run: |
+          echo "=== Cleaning Docker resources ==="
+          # Stop all running containers
+          docker stop $(docker ps -aq) 2>/dev/null || true
+          
+          # Remove all containers
+          docker rm $(docker ps -aq) 2>/dev/null || true
+          
+          # Remove all images
+          docker rmi $(docker images -q) 2>/dev/null || true
+          
+          # Remove all volumes
+          docker volume prune -f || true
+          
+          # Remove all networks
+          docker network prune -f || true
+          
+          # Remove build cache
+          docker builder prune -af || true
+          
+          # System-wide cleanup
+          docker system prune -af --volumes || true
+          
+          echo "Docker cleanup completed"
+
+      - name: Clean package manager caches
+        run: |
+          echo "=== Cleaning package manager caches ==="
+          
+          # APT cleanup
+          sudo apt-get clean
+          sudo apt-get autoclean
+          sudo apt-get autoremove -y
+          
+          # Snap cleanup
+          sudo snap set system refresh.retain=2 || true
+          
+          # Clean various caches
+          rm -rf ~/.cache/pip || true
+          rm -rf ~/.cache/pipenv || true
+          rm -rf ~/.npm || true
+          rm -rf ~/.yarn || true
+          rm -rf ~/.cargo/registry || true
+          rm -rf ~/.rustup/downloads || true
+          rm -rf ~/.go/pkg || true
+          rm -rf ~/.gradle/caches || true
+          rm -rf ~/.m2/repository || true
+          rm -rf ~/.nuget/packages || true
+          
+          echo "Package manager cleanup completed"
+
+      - name: Clean temporary files and directories
+        run: |
+          echo "=== Cleaning temporary files ==="
+          
+          # System temp directories
+          sudo rm -rf /tmp/* 2>/dev/null || true
+          sudo rm -rf /var/tmp/* 2>/dev/null || true
+          
+          # GitHub Actions temp directories
+          rm -rf ~/actions-runner/_work/_temp/* 2>/dev/null || true
+          rm -rf $RUNNER_TEMP/* 2>/dev/null || true
+          rm -rf $RUNNER_WORKSPACE/.git/objects/pack/*.tmp 2>/dev/null || true
+          
+          # Build artifacts and temporary files
+          find . -name "*.tmp" -type f -delete 2>/dev/null || true
+          find . -name "*.temp" -type f -delete 2>/dev/null || true
+          find . -name "*.log" -size +100M -delete 2>/dev/null || true
+          find . -name "core.*" -type f -delete 2>/dev/null || true
+          
+          # Node.js specific
+          find . -name "node_modules" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name ".next" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name ".nuxt" -type d -prune -exec rm-rf {} + 2>/dev/null || true
+          find . -name "dist" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name "build" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          
+          # Python specific
+          find . -name "__pycache__" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name "*.pyc" -type f -delete 2>/dev/null || true
+          find . -name ".pytest_cache" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name ".coverage" -type f -delete 2>/dev/null || true
+          find . -name "htmlcov" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          
+          # Java specific
+          find . -name "target" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name "*.class" -type f -delete 2>/dev/null || true
+          
+          # .NET specific
+          find . -name "bin" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          find . -name "obj" -type d -prune -exec rm -rf {} + 2>/dev/null || true
+          
+          echo "Temporary files cleanup completed"
+
+      - name: Clean system logs and caches
+        run: |
+          echo "=== Cleaning system logs and caches ==="
+          
+          # System logs
+          sudo journalctl --vacuum-time=1d || true
+          sudo rm -rf /var/log/*.log.* 2>/dev/null || true
+          sudo rm -rf /var/log/*/*.log.* 2>/dev/null || true
+          
+          # Thumbnail cache
+          rm -rf ~/.cache/thumbnails/* 2>/dev/null || true
+          
+          # Browser caches (if any)
+          rm -rf ~/.cache/google-chrome/* 2>/dev/null || true
+          rm -rf ~/.cache/chromium/* 2>/dev/null || true
+          rm -rf ~/.cache/mozilla/* 2>/dev/null || true
+          
+          echo "System cleanup completed"
+
+      - name: Clean GitHub Actions artifacts
+        run: |
+          echo "=== Cleaning GitHub Actions artifacts ==="
+          
+          # Remove old workflow logs and artifacts
+          rm -rf ~/.local/share/runner/* 2>/dev/null || true
+          
+          # Clean runner tool cache if it exists
+          rm -rf /opt/hostedtoolcache/*/*/x64 2>/dev/null || true
+          
+          echo "GitHub Actions cleanup completed"
+
+      - name: Force filesystem sync and cleanup
+        run: |
+          echo "=== Final cleanup ==="
+          
+          # Force filesystem sync
+          sync
+          
+          # Clear swap if any
+          sudo swapoff -a && sudo swapon -a 2>/dev/null || true
+          
+          # Clear page cache, dentries and inodes
+          echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null || true
+          
+          echo "Filesystem cleanup completed"
+
+      - name: Display final disk usage
+        run: |
+          echo "=== Final Disk Usage ==="
+          df -h
+          echo ""
+          echo "=== /tmp directory after cleanup ==="
+          du -sh /tmp/* 2>/dev/null | head -10 || echo "No significant files in /tmp"
+          echo ""
+          echo "=== Largest remaining files (top 10) ==="
+          find / -type f -size +100M 2>/dev/null | head -10 || echo "No large files found"
+
+      - name: Generate cleanup report
+        run: |
+          echo "=== Cleanup Summary ==="
+          echo "Cleanup completed successfully at $(date)"
+          echo "Available disk space:"
+          df -h / | tail -1 | awk '{print "  Total: " $2 ", Used: " $3 ", Available: " $4 ", Usage: " $5}'
+          
+          # Save cleanup timestamp
+          echo "last_cleanup=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_OUTPUT
+
+    outputs:
+      cleanup_timestamp: ${{ steps.cleanup.outputs.last_cleanup }}
+
+  verify-cleanup:
+    needs: cleanup
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+      - name: Verify cleanup success
+        run: |
+          echo "Cleanup completed at: ${{ needs.cleanup.outputs.cleanup_timestamp }}"
+          
+          # Check if cleanup job succeeded
+          if [ "${{ needs.cleanup.result }}" = "success" ]; then
+            echo "✅ Cleanup completed successfully"
+          else
+            echo "❌ Cleanup failed or was cancelled"
+            exit 1
+          fi
