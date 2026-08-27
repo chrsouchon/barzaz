@@ -1,0 +1,19 @@
+BODY {font-family: comic sans ms; font-size:13; color:blue;}
+TD {font-weight=normal; text-align:left}
+TH {font-weight:bold; text-align:center }
+.grandtitre { font-size:30; text-align:center; font-weight:bold }
+.titre { font-size:20; text-align:center; font-weight:bold }
+.norme { font-face: comic sans ms; font-size:13; font-weight:light}
+.petit { font-face: comic sans ms; font-size:8; font-weight:light}
+.menu2 {
+	COLOR: #ffce6b; FONT-FAMILY: "arial", "helvetica", sans-serif; FONT-SIZE: 13px; FONT-STYLE: italic; FONT-WEIGHT: bold
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #000000; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #7e601f
+}
