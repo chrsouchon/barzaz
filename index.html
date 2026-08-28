@@ -1,369 +1,270 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<link href="https://chrsouchon.fr/logo/goelan.jpg" rel="icon" type="image/x-icon"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Christian Souchon: Homepage</title>
-<meta content="Christian Souchon" name="author"/>
-<meta content="Jacobite songs, Barzaz Breiz, Barzhaz Breizh, Michel Galiana, poetry, poèmes, Danses de Bretagne, Breton Dances, MIDI, folk music, traditional music, celtic music, Brittany, Breton music, La Villemarqué, musique bretonne, Jean-Michel Guilcher, Scotland, Clans, French translation, traduction française" name="keywords"/>
-<meta content="Midi Files, Lyrics in Breton, English and French and Information to Breton songs out of the Barzhaz Breizh and Scottish Jacobite Songs. Poems by Michel Galiana with translation by Christian Souchon" name="description"/>
-<style>
-        /* Original CSS styles from souchon.css, modernized */
-        body {
-            font-family: "Comic Sans MS", cursive;
-            font-size: 13px;
-            color: blue;
-            background-color: #000099;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.4;
-        }
-        
-        td {
-            font-weight: normal;
-            text-align: left;
-        }
-        
-        th {
-            font-weight: bold;
-            text-align: center;
-        }
-        
-        .grandtitre {
-            font-size: 30px;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .titre {
-            font-size: 20px;
-            text-align: center;
-            font-weight: bold;
-            color: #FFFFFF;
-        }
-        
-        .norme {
-            font-family: "Comic Sans MS", cursive;
-            font-size: 13px;
-            font-weight: 300;
-        }
-        
-        /* .petit {
-            font-family: "Comic Sans MS", cursive;
-            font-size: 8px;
-            font-weight: 300;
-            color: #000000;
-        } */
-        
-        .menu2 {
-            color: #ffce6b;
-            font-family: "Arial", "Helvetica", sans-serif;
-            font-size: 13px;
-            font-style: italic;
-            font-weight: bold;
-        }
-        
-        /* Override body link colors for the specific design */
-        a {
-            color: #FFCC66;
-            text-decoration: underline;
-        }
-        
-        a:hover {
-            color: #FFFFFF;
-            font-style: normal;
-            text-decoration: none;
-        }
-        
-        a:visited {
-            color: #FF0000;
-        }
-        
-        /* Additional styles for layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .header-table {
-            width: 100%;
-            border: 0;
-            padding: 5px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .profile-section {
-            text-align: center;
-        }
-        
-        .profile-image {
-            width: 196px;
-            height: 193px;
-            border: 0;
-            margin-bottom: 15px;
-        }
-        
-        .toggle-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .toggle-link {
-            cursor: pointer;
-            display: inline-flex;
-            align-items: flex-start;
-            gap: 5px;
-        }
-        
-        .toggle-image {
-            width: 16px;
-            height: 16px;
-            border: 0;
-            margin-right: 5px;
-            vertical-align: top;
-            background-color: #FFFFFF;
-            color: #000;
-            text-align: center;
-            line-height: 16px;
-            font-weight: bold;
-            font-size: 12px;
-        }
-        
-        .expandable-content {
-            display: none;
-            margin-top: 15px;
-            font-size: 17px;
-            font: 1em sans-serif;
-        }
-        
-        .expandable-content.show {
-            display: block;
-        }
-        
-        .travel-table {
-            width: 100%;
-            font-size: 11px;
-        }
-        
-        .travel-table td {
-            height: 17px;
-            vertical-align: top;
-            padding: 5px;
-        }
-        
-        .travel-table li {
-            list-style: none;
-            margin: 2px 0;
-        }
-        
-        .travel-table ul {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .language-table {
-            width: 100%;
-            border: 0;
-            padding: 0;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .language-table td {
-            height: 17px;
-            text-align: center;
-            width: 25%;
-        }
-        
-        .flag-image {
-            width: 30px;
-            height: 20px;
-            border: 1px solid #333;
-            display: inline-block;
-            text-align: center;
-            line-height: 20px;
-            background-color: #ccc;
-            color: #000;
-            font-size: 10px;
-            text-decoration: none;
-        }
-        
-        .counter-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .counter-image {
-            vertical-align: middle;
-            width: 60px;
-            height: 15px;
-            border: 0;
-            margin: 0 4px;
-        }
-        
-        .footer-image {
-            width: 15px;
-            height: 4px;
-            border: 0;
-            margin: 0;
-        }
-        
-        @media (max-width: 768px) {
-            .language-table td {
-                width: 50%;
-                display: inline-block;
-            }
-            
-            .travel-table {
-                font-size: 10px;
-            }
-            
-            .travel-table td {
-                display: block;
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-<p> </p>
-<table class="header-table">
-<tr>
-<td>
-<div class="profile-section">
-<p class="titre">
-<img alt="Présentation du site" class="profile-image" height="193" src="goel_ti2.jpg" width="196"/><br/><br/>
-<strong>Christian Souchon<br/>
-                            Jouy en Josas France<br/></strong>
-</p>
-<p class="menu2">
-                            e-mail: <a href="mailto:chrsouchon@free.fr">chrsouchon@free.fr</a>
-</p>
-</div>
-</td>
-</tr>
-</table>
-<div class="toggle-section">
-<p class="norme">
-<a class="toggle-link" onclick="return toggleMe('para2')">
-<span class="toggle-image" id="para2_image">+</span>
-</a>
-</p>
-<div class="expandable-content" id="para2">
-<table class="travel-table">
-<tr>
-<td>
-<ul>
-<li><a href="https://galiana.chrsouchon.fr/brassens/brassens.html">Brassens</a></li>
-<li><a href="https://bulgaria.chrsouchon.fr/index.html">Bulgarie 2008</a></li>
-<li><a href="https://www.chrsouchon.fr/Mariani/index.html">Commanderie</a></li>
-<li><a href="https://www.chrsouchon.fr/berlin.html">Berlin 2025</a></li>       
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://croatie.chrsouchon.fr/puntijar.html">Croatie 2019</a></li>
-<li><a href="https://www.chrsouchon.fr/Nuremberg 2021/index.html">Nuremberg 2021</a></li>
-<li><a href="https://www.chrsouchon.fr/paris13/Paris13.html">Paris XIIIème 2011</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.chrsouchon.fr/azulejos/index.html">Portugal 2010</a></li>
-<li><a href="https://www.chrsouchon.fr/Roumanie/index.html">Roumanie 2024</a></li>
-<li><a href="https://www.chrsouchon.fr/2006 MoscStP/index.html">Russie 2006</a></li>
-</ul>
-</td>
-<td>
-<ul>
-<li><a href="https://www.chrsouchon.fr/Srbija/index.html">Serbie 2018</a></li>
-<li><a href="https://www.chrsouchon.fr/tango/tangos.html">Temps du Tango</a></li>
-<li><a href="https://www.chrsouchon.fr/Versailles/versaill.html">Versailles-Jardins</a></li>
-<li><a href="https://www.chrsouchon.fr/Nuremberg 2021/index.html">Nuremberg 2021</a></li>
-</ul>
-</td>
-</tr>
-</table>
-</div>
-</div>
-<table class="language-table">
-<tr>
-<td>
-<div>
-<p class="menu2"><a href="home1f.html"><strong>BIENVENUE!</strong></a></p>
-</div>
-</td>
-<td>
-<div>
-<p class="menu2"><a href="home1e.html"><strong>WELCOME!</strong></a></p>
-</div>
-</td>
-<td>
-<div>
-<p class="menu2"><a href="home1d.html"><strong>WILLKOMMEN!</strong></a></p>
-</div>
-</td>
-<td>
-<div>
-<p class="menu2"><a href="home1b.html"><strong>DEGEMER MAD!</strong></a></p>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<a href="home1f.html">
-<span class="flag-image"><img alt="🇫🇷" height="20" src="drapfrpt.gif" width="30"/></span>
-</a>
-</td>
-<td>
-<a href="home1e.html">
-<span class="flag-image"><img alt="🇬🇧" height="20" src="ujack.gif" width="30"/></span>
-</a>
-</td>
-<td>
-<a href="home1d.html">
-<span class="flag-image"><img alt="🇩🇪" height="20" src="geradler.gif" width="30"/></span>
-</a>
-</td>
-<td>
-<a href="home1b.html">
-<span class="flag-image"><img alt="BZH" height="20" src="gwenhadu.gif" width="30"/></span>
-</a>
-</td>
-</tr>
-</table>
-<!-- <div class="counter-section">
-            <p class="petit">
-                <img src="https://counter.digits.net/wc/-d/4/chrsouchon1" class="counter-image" alt="Visit counter">
-                visites depuis le 12.04.03,<br>
-                selon <a href="https://www.digits.net/">Web counter</a><br>
-                <img src="wc02.gif" class="footer-image" alt="">
-            </p>
-        </div> -->
-</div>
-<script>
-        function toggleMe(elementId) {
-            var element = document.getElementById(elementId);
-            var image = document.getElementById(elementId + '_image');
-            
-            if (!element) return true;
-            
-            if (element.style.display === "none" || !element.classList.contains('show')) {
-                element.style.display = "block";
-                element.classList.add('show');
-                image.textContent = '−';
-            } else {
-                element.style.display = "none";
-                element.classList.remove('show');
-                image.textContent = '+';
-            }
-            return false;
-        }
-    </script>
-</body>
+ <head>
+  <title>
+   Christian Souchon: Index
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="Christian Souchon" name="author"/>
+  <meta content="Jacobite songs, Barzaz Breiz, Barzhaz Breizh, Michel Galiana, poetry, po&Atilde;&uml;mes, Danses de Bretagne, Breton Dances, MIDI, folk music, traditional music, celtic music, Brittany, Breton music, La Villemarqu&Atilde;&copy;, musique bretonne, Jean-Michel Guilcher, Scotland, Clans, French translation, traduction fran&Atilde;&sect;aise" name="keywords"/>
+  <meta content="Midi Files, Lyrics in Breton, English and French and Information to Breton songs out of the Barzhaz Breizh and Scottish Jacobite Songs. Poems by Michel Galiana with translation by Christian Souchon" name="description"/>
+  <link href="souchon.css" rel="stylesheet" title="style" type="text/css"/>
+  <meta content="86400" http-equiv="expires"/>
+  <script type="text/javascript">
+   function toggleMe(a){
+var e=document.getElementById(a);
+var i = document.getElementById(a + '_image');
+if(!e)return true;
+if(e.style.display=="none"){
+e.style.display="block"
+i.src = 'moins.gif';
+} else {
+e.style.display="none"
+i.src = 'plus.gif';
+}
+return false;
+}
+  </script>
+ </head>
+ <body alink="#FF0000" bgcolor="#000099" link="#FFCC66" text="#FFFFFF" vlink="#FF0000">
+  <p>
+   &nbsp;
+  </p>
+  <table align="center" border="0" cellpadding="5" width="100%">
+   <tr>
+    <td>
+     <div align="left">
+      <p align="center" class="titre">
+       <font face="Verdana, Arial, Helvetica, sans-serif">
+        <font color="#FFFFFF">
+         <img alt="Pr&Atilde;&copy;sentation du site" border="0" height="193" src="goel_ti2.jpg" width="196"/>
+         <br/>
+         <br/>
+         <b>
+          Christian Souchon
+          <br/>
+          Jouy en Josas France
+          <br/>
+          <br/>
+          <p align="center" class="menu2" face="Verdana, Arial, Helvetica, sans-serif" font="">
+           e-mail:
+           <a href="mailto:chrsouchon@free.fr">
+            chrsouchon@free.fr
+           </a>
+          </p>
+         </b>
+        </font>
+       </font>
+      </p>
+     </div>
+    </td>
+   </tr>
+  </table>
+  <center>
+   <p class="norme">
+    <a onclick="return toggleMe('para2')" style="cursor:pointer;">
+     <img id="para2_image" src="plus.gif" style="border:0;margin-right:5px;vertical-align:top;"/>
+    </a>
+    <div id="para2" style="display:none;">
+     <font size="-2">
+      <table width="100%">
+       <td height="17">
+        <li>
+         <a href=" galiana.chrsouchon.fr/brassens/brassens.html">
+          Brassens
+         </a>
+         <br/>
+         <li>
+          <a href="bulgaria.chrsouchon.fr/index.html">
+           Bulgarie 2008
+          </a>
+          <br/>
+          <li>
+           <a href="tango/tangos.html">
+            Le temps du Tango
+           </a>
+           <br/>
+           <li>
+            <a href="Roumanie/index.html">
+             Roumanie 2024
+            </a>
+            <br/>
+           </li>
+          </li>
+         </li>
+        </li>
+       </td>
+       <td height="17">
+        <li>
+         <a href="Mariani/index.html">
+          La Commanderie
+         </a>
+         <br/>
+         <li>
+          <a href="MoscStP/index.html">
+           Russie 2006
+          </a>
+          <br/>
+          <li>
+           <a href="versailles/versaill.html">
+            Jardins de Versailles
+           </a>
+           <br/>
+           <li>
+            <a href="Berlin/berlin.html">
+             Berlin 2025
+            </a>
+            <br/>
+           </li>
+          </li>
+         </li>
+        </li>
+       </td>
+       <td height="17">
+        <li>
+         <a href="paris13/paris13.html">
+          Paris XIIIeme 2011
+         </a>
+         <br/>
+         <li>
+          <a href="azulejos/index.html">
+           Portugal 2010
+          </a>
+          <br/>
+          <li>
+           <a href="Nuremberg 2021/index.html">
+            Nuremberg 2021
+           </a>
+           <br/>
+          </li>
+         </li>
+        </li>
+       </td>
+       <td height="17">
+        <li>
+         <a href="Srbija/index.html">
+          Serbie 2018
+         </a>
+         <br/>
+         <li>
+          <a href="croatie/index.html">
+           Croatie 2019
+          </a>
+          <br/>
+          <li>
+           <a href="dansall/snijeg.html">
+            Bosnie
+           </a>
+           <br/>
+           <li>
+            <a href="Mokranjac/mokranjac.html">
+             Mokranjac
+            </a>
+            <br/>
+           </li>
+          </li>
+         </li>
+        </li>
+       </td>
+      </table>
+     </font>
+    </div>
+    <br/>
+    <table align="center" border="0" cellpadding="0" width="100%">
+     <tr>
+      <td height="17">
+       <div align="center">
+        <p class="menu2">
+         <a href="home1f.html">
+          <b>
+           BIENVENUE!
+          </b>
+         </a>
+        </p>
+       </div>
+      </td>
+      <td height="17">
+       <div align="center">
+        <p class="menu2">
+         <a href="home1e.html">
+          <b>
+           WELCOME!
+          </b>
+         </a>
+        </p>
+       </div>
+      </td>
+      <td height="17">
+       <div align="center">
+        <p class="menu2">
+         <a href="home1d.html">
+          <b>
+           WILLKOMMEN!
+          </b>
+         </a>
+        </p>
+       </div>
+      </td>
+      <td height="17">
+       <div align="center">
+        <p class="menu2">
+         <a href="home1b.html">
+          <b>
+           DEGEMER MAD!
+           <b>
+           </b>
+          </b>
+         </a>
+        </p>
+       </div>
+      </td>
+     </tr>
+     <tr>
+      <td width="25%">
+       <center>
+        <a href="home1f.html" target="_top">
+         <img height="20" src="drapfrpt.gif" width="30"/>
+        </a>
+       </center>
+      </td>
+      <td width="25%">
+       <center>
+        <a href="home1e.html" target="_top">
+         <img height="20" src="ujack.gif" width="30"/>
+        </a>
+       </center>
+      </td>
+      <td width="25%">
+       <center>
+        <a href="home1d.html" target="_top">
+         <img height="20" src="geradler.gif" width="30"/>
+        </a>
+       </center>
+      </td>
+      <td width="25%">
+       <center>
+        <a href="home1b.html" target="_top">
+         <img height="20" src="gwenhadu.gif" width="30"/>
+        </a>
+       </center>
+      </td>
+     </tr>
+    </table>
+    <p algn="center" class="petit">
+     <font face="Verdana, Arial, Helvetica, sans-serif">
+      <font color="#000000">
+       <!-- 
+<br><br><br><center>
+<IMG SRC="http://counter.digits.net/wc/-d/4/chrsouchon1" ALIGN=middle WIDTH=60 HEIGHT=15 BORDER=0 HSPACE=4 VSPACE=2> visites depuis le 12.04.03,<br>
+selon <A HREF="http://www.digits.net/">Web counter</A><br>
+
+<br>
+<IMG SRC="wc02.gif" WIDTH=15 HEIGHT=4 BORDER=0 VSPACE=0 HSPACE=0></A><br>
+-->
+      </font>
+     </font>
+    </p>
+   </p>
+  </center>
+ </body>
 </html>
