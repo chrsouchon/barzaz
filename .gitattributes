@@ -59,3 +59,7 @@ Srbija/photos/tambura.webm filter=lfs diff=lfs merge=lfs -text
 Srbija/projet[[:space:]]video/nocebido.mp4 filter=lfs diff=lfs merge=lfs -text
 Srbija/projet[[:space:]]video/nsmariag.mp4 filter=lfs diff=lfs merge=lfs -text
 Srbija/projet[[:space:]]video/nsmariag.webm filter=lfs diff=lfs merge=lfs -text
+Srbija/projet[[:space:]]video/tambura.mp4 filter=lfs diff=lfs merge=lfs -text
+alarch.m4a filter=lfs diff=lfs merge=lfs -text
+alarch1.m4a filter=lfs diff=lfs merge=lfs -text
+mochail.mov filter=lfs diff=lfs merge=lfs -text
