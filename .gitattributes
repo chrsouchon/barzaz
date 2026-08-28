@@ -47,3 +47,15 @@ Perinaig[[:space:]]Leroux[[:space:]]David.mp4 filter=lfs diff=lfs merge=lfs -tex
 *.mk3d filter=lfs diff=lfs merge=lfs -text
 Identitytrescourt.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+Nuremberg[[:space:]]2021/photos/VID180957.mp4 filter=lfs diff=lfs merge=lfs -text
+Nuremberg[[:space:]]2021/photos/VID201450.mp4 filter=lfs diff=lfs merge=lfs -text
+Roumanie/Photos/bicaz.mp4 filter=lfs diff=lfs merge=lfs -text
+Roumanie/Photos/constant.mp4 filter=lfs diff=lfs merge=lfs -text
+Roumanie/Photos/danse.mp4 filter=lfs diff=lfs merge=lfs -text
+Srbija/photos/nocebido.mp4 filter=lfs diff=lfs merge=lfs -text
+Srbija/photos/nsmariag.mp4 filter=lfs diff=lfs merge=lfs -text
+Srbija/photos/tambura.mp4 filter=lfs diff=lfs merge=lfs -text
+Srbija/photos/tambura.webm filter=lfs diff=lfs merge=lfs -text
+Srbija/projet[[:space:]]video/nocebido.mp4 filter=lfs diff=lfs merge=lfs -text
+Srbija/projet[[:space:]]video/nsmariag.mp4 filter=lfs diff=lfs merge=lfs -text
+Srbija/projet[[:space:]]video/nsmariag.webm filter=lfs diff=lfs merge=lfs -text
